@@ -16,6 +16,52 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'ai-portal/package-lock.json'
+
+      - name: Install deps
+        working-directory: ai-portal
+        run: npm ci
+
+      - name: Prisma generate and migrate
+        working-directory: ai-portal
+        run: |
+          npx prisma generate
+          npx prisma migrate dev --name ci --skip-generate
+
+      - name: Build
+        working-directory: ai-portal
+        run: npm run build
+
+      - name: Install Playwright browsers
+        working-directory: ai-portal
+        run: npx playwright install --with-deps
+
+      - name: Run tests
+        working-directory: ai-portal
+        env:
+          E2E_BYPASS_AUTH: '1'
+        run: npx playwright test --reporter dot
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
           node-version: 20
           cache: 'npm'
 

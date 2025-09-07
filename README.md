@@ -1,5 +1,7 @@
 # AI Portal (Next.js + Prisma + NextAuth + Ollama)
 
+![CI](https://github.com/ton-apicha/gpt-portal/actions/workflows/ci.yml/badge.svg)
+
 พอร์ทัลแชทภายในสำหรับ `llama3.2-vision` รองรับแชทหลายห้อง, สตรีมคำตอบ, Markdown/Code highlight, ปุ่มคัดลอก, อัปโหลดรูปพร้อมพรีวิว และเทส E2E ด้วย Playwright
 
 ## คุณสมบัติหลัก
