@@ -6,7 +6,7 @@ function mockFetchStreamScript() {
 			const originalFetch = window.fetch
 			window.fetch = (input: RequestInfo | URL, init?: RequestInit) => {
 				const url = typeof input === 'string' ? input : (input as Request).url
-				if (url.includes('/api/chat')) {
+				if (typeof url === 'string' && url.includes('/api/chats/') && url.includes('/messages')) {
 					const encoder = new TextEncoder()
 					const body = new ReadableStream<Uint8Array>({
 						start(controller) {
@@ -35,12 +35,11 @@ test.describe('Chat page', () => {
 	test('should send message and render streamed reply', async ({ page }) => {
 		await page.addInitScript(mockFetchStreamScript())
 		await page.goto('/chat')
-		const textarea = page.getByPlaceholder('พิมพ์ข้อความ')
+		const textarea = page.getByPlaceholder('พิมพ์ข้อความ...')
 		await textarea.fill('ทดสอบ')
 		await page.getByRole('button', { name: 'ส่ง' }).click()
 
-		await expect(page.getByText('คุณ: ทดสอบ')).toBeVisible()
-		const assistant = page.locator('[data-testid="assistant-msg"]').last()
-		await expect(assistant).toContainText('สวัสดีครับ', { timeout: 7000 })
+		await expect(page.getByText(/คุณ:\s*ทดสอบ/)).toBeVisible()
+		await expect(page.getByText(/ผู้ช่วย:\s*สวัสดีครับ/)).toBeVisible({ timeout: 7000 })
 	})
 })

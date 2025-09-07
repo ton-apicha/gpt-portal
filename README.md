@@ -1,16 +1,20 @@
-# GPT Portal (Next.js + Ollama)
+# AI Portal (Next.js + Prisma + NextAuth + Ollama)
 
-พอร์ทัลสำหรับสนทนากับโมเดลในเครื่องผ่าน Ollama พร้อมระบบล็อกอิน, สตรีมคำตอบแบบเรียลไทม์, หน้า Status และเทส E2E ด้วย Playwright
+พอร์ทัลแชทภายในสำหรับ `llama3.2-vision` รองรับแชทหลายห้อง, สตรีมคำตอบ, Markdown/Code highlight, ปุ่มคัดลอก, อัปโหลดรูปพร้อมพรีวิว และเทส E2E ด้วย Playwright
 
 ## คุณสมบัติหลัก
-- Login/Register ด้วย Credentials (NextAuth v4 + JWT)
-- ห้องแชท `/chat` สตรีมคำตอบ + ปุ่มหยุด + คีย์ลัด Enter/Shift+Enter
-- Proxy `/api/chat` → Ollama (`llama3.2-vision`) พร้อม timeout และจำกัดโทเค็น
-- `/status` แสดงสถานะระบบ (Ollama up/down, latency)
-- เทส E2E หน้าแชทด้วย Playwright (mock stream)
+- Login (NextAuth v4 + Credentials + JWT)
+- จัดการแชท: New/Rename/Delete, Sidebar พร้อม Badge จำนวนข้อความ และเมนู ⋯
+- สตรีมคำตอบแบบเรียลไทม์ (ReadableStream) + ปุ่มหยุด
+- Markdown + โค้ดบล็อกไฮไลต์ + ปุ่ม Copy code / Copy คำตอบ
+- อัปโหลดรูป (PNG/JPEG) แสดงพรีวีก่อนส่ง และแนบเข้าบทสนทนาให้ Vision
+- Auto-title แชทจากข้อความแรก
+- หน้า `/status` และ API `/api/health`
+- Prisma (SQLite) เก็บ Users/Chats/Messages
+- เทส E2E ครอบคลุม CRUD แชท, สตรีม, Markdown/Copy, Upload รูป
 
 ## ความต้องการระบบ
-- Node.js 18+ (แนะนำ LTS/ใหม่กว่า)
+- Node.js 18+ (แนะนำ LTS)
 - Windows/Mac/Linux
 - Ollama 0.11+ และโมเดล `llama3.2-vision`
 
@@ -19,68 +23,73 @@
 # 1) ติดตั้ง dependencies
 npm install
 
-# 2) สร้างฐานข้อมูลและ Prisma Client
-npx prisma generate
-npx prisma migrate dev --name init --skip-generate
+# 2) Prisma migrate
+npx prisma migrate dev --name init
 
-# 3) ดึงโมเดล (ฝั่งเครื่องคุณ)
+# 3) ดึงโมเดล (เครื่องคุณ)
 ollama pull llama3.2-vision
 ```
 
 ## การรัน Dev Server
 ```bash
-# แนะนำใช้สคริปต์บน Windows เพื่อกันเทอร์มินัลค้าง
+# Windows: ใช้สคริปต์เพื่อความเสถียร
 ./dev.ps1
 # หรือ
 npm run dev
 ```
 - เปิดเว็บ: `http://localhost:3000`
-- ห้องแชท: `http://localhost:3000/chat`
+- ห้องแชท: เปิด `/chat` จะสร้างห้องใหม่และ redirect ไป `/chat/[id]`
 - สเตตัส: `http://localhost:3000/status`
 
 ## การเชื่อมต่อ Ollama
-ค่าเริ่มต้นจะใช้ `http://localhost:11434` หากรันพอร์ตอื่น ตั้งค่า Env ต่อไปนี้ได้
-```
-OLLAMA_BASE_URL=http://localhost:11434
-```
-สามารถตั้งผ่าน shell หรือไฟล์ `.env.local`
+ค่าเริ่มต้น `OLLAMA_BASE_URL=http://localhost:11434` สามารถตั้งผ่าน ENV หรือ `.env.local`
 
-## การทดสอบ (Playwright)
-```bash
-# ติดตั้งบราวเซอร์ (ครั้งแรก)
-npx playwright install
+## API/เพจสำคัญ
+- `GET/POST /api/chats` สร้าง/รายการแชท (รวม `_count.messages`)
+- `GET/PATCH/DELETE /api/chats/[id]` อ่าน/เปลี่ยนชื่อ/ลบแชท
+- `POST /api/chats/[id]/messages` ส่งข้อความไป Ollama แบบสตรีม (แนบภาพด้วย `![image](/uploads/..)`)
+- `POST /api/uploads/image` อัปโหลดรูป field `file` รองรับ `image/png,image/jpeg` สูงสุด 8MB
+- `/chat` → redirect ไปห้องใหม่, `/chat/[id]` หน้าแชทหลัก
+- `/api/health`, `/status`
 
-# รันทดสอบทั้งหมด
-npm test
-```
-เทส `tests/chat.spec.ts` จะ mock `/api/chat` ให้สตรีมคำตอบจำลองเพื่อให้เทสรวดเร็วและเสถียร
-
-## โครงสร้างโปรเจกต์
+## โครงสร้างโฟลเดอร์
 ```
 app/
   api/
-    auth/[...nextauth]/route.ts  # NextAuth (Credentials)
-    chat/route.ts                 # Proxy ไป Ollama (สตรีม)
-    health/route.ts               # เช็คสถานะ Ollama
-  (auth)/login/page.tsx          # หน้า Login
-  (auth)/register/page.tsx       # หน้า Register
-  chat/page.tsx                  # ห้องแชท (UI โมเดิร์น)
-  status/page.tsx                # หน้า Status
-lib/
-  prisma.ts                      # Prisma Client singleton
-  auth.ts                        # ตัวเลือก/Callback ของ NextAuth
-prisma/
-  schema.prisma                  # สคีมา User/Chat/Message (SQLite)
+    chats/route.ts                 # list/create
+    chats/[id]/route.ts            # get/rename/delete
+    chats/[id]/messages/route.ts   # stream -> Ollama (Vision)
+    uploads/image/route.ts         # upload image (PNG/JPEG)
+    health/route.ts                # health check
+  chat/
+    layout.tsx / sidebarClient.tsx
+    [id]/page.tsx / client.tsx     # UI แชทหลัก
+  status/page.tsx
+components/Markdown.tsx            # Markdown + highlight + copy code
+lib/prisma.ts, lib/auth.ts, lib/session.ts
+tests/*.spec.ts                    # Playwright tests
 ```
 
-## Troubleshooting
-- หน้าช้าหรือค้าง: ตรวจ `/status` ว่า Ollama up และ latency ไม่สูง
-- "Failed to fetch": อาจ timeout จากฝั่ง API แนะนำรีเฟรช/ลดคำถาม/เพิ่ม `timeoutMs`
-- PSReadLine/PowerShell ค้าง: เปลี่ยนใช้ Command Prompt หรือรันผ่าน `dev.ps1`
+## การทดสอบ (Playwright)
+```bash
+# ติดตั้งบราวเซอร์ครั้งแรก
+npx playwright install
 
-## Deploy คร่าวๆ
-- Build: `npm run build` แล้ว `npm start`
-- ตั้งค่า Env: `NEXTAUTH_SECRET`, `OLLAMA_BASE_URL` และฐานข้อมูลตามจริง
+# ข้าม Auth (เฉพาะเทส/Dev)
+set E2E_BYPASS_AUTH=1  # PowerShell: $env:E2E_BYPASS_AUTH="1"
+
+# รันเทสทั้งหมด
+npm test
+```
+รายการเทสสำคัญ: `tests/chat.spec.ts`, `tests/chat-crud.spec.ts`, `tests/chat-markdown.spec.ts`, `tests/chat-copy.spec.ts`, `tests/upload-image.spec.ts`, `tests/image-chat.spec.ts`
+
+## ตัวแปรแวดล้อม
+- `OLLAMA_BASE_URL` ค่าเริ่มต้น `http://localhost:11434`
+- `E2E_BYPASS_AUTH=1` เพื่อข้าม Auth ในเทส
+
+## Troubleshooting สั้นๆ
+- Dev server ค้างบน Windows: ใช้ `dev.ps1`
+- สตรีมไม่มา: ตรวจ `/status` และ `OLLAMA_BASE_URL`
 
 ## License
-MIT
+ภายในองค์กร

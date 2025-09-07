@@ -66,3 +66,746 @@ https://next-auth.js.org/warnings#nextauth_url
 https://next-auth.js.org/warnings#nextauth_url
 [Error: failed to pipe response] { [cause]: 'timeout' }
 [Error: failed to pipe response] { [cause]: 'timeout' }
+ ⨯ [Error: The default export is not a React Component in "/chat/layout"]
+ ⨯ [Error: The default export is not a React Component in "/chat/layout"] {
+  page: '/chat'
+}
+ ⨯ ./app/chat/layout.tsx:5:1
+Module not found: Can't resolve './sidebarClient'
+[0m [90m 3 |[39m [36mimport[39m { authOptions } [36mfrom[39m [32m'@/lib/auth'[39m
+ [90m 4 |[39m [36mimport[39m { prisma } [36mfrom[39m [32m'@/lib/prisma'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mSidebarClient[39m [36mfrom[39m [32m'./sidebarClient'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mexport[39m [36mdefault[39m [36masync[39m [36mfunction[39m [33mChatLayout[39m({ children }[33m:[39m { children[33m:[39m [33mReactNode[39m }) {
+ [90m 8 |[39m 	[36mconst[39m session [33m=[39m [36mawait[39m getServerSession(authOptions)[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./app/chat/layout.tsx:5:1
+Module not found: Can't resolve './sidebarClient'
+[0m [90m 3 |[39m [36mimport[39m { authOptions } [36mfrom[39m [32m'@/lib/auth'[39m
+ [90m 4 |[39m [36mimport[39m { prisma } [36mfrom[39m [32m'@/lib/prisma'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mSidebarClient[39m [36mfrom[39m [32m'./sidebarClient'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mexport[39m [36mdefault[39m [36masync[39m [36mfunction[39m [33mChatLayout[39m({ children }[33m:[39m { children[33m:[39m [33mReactNode[39m }) {
+ [90m 8 |[39m 	[36mconst[39m session [33m=[39m [36mawait[39m getServerSession(authOptions)[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./app/chat/layout.tsx:5:1
+Module not found: Can't resolve './sidebarClient'
+[0m [90m 3 |[39m [36mimport[39m { authOptions } [36mfrom[39m [32m'@/lib/auth'[39m
+ [90m 4 |[39m [36mimport[39m { prisma } [36mfrom[39m [32m'@/lib/prisma'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mSidebarClient[39m [36mfrom[39m [32m'./sidebarClient'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mexport[39m [36mdefault[39m [36masync[39m [36mfunction[39m [33mChatLayout[39m({ children }[33m:[39m { children[33m:[39m [33mReactNode[39m }) {
+ [90m 8 |[39m 	[36mconst[39m session [33m=[39m [36mawait[39m getServerSession(authOptions)[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./app/chat/layout.tsx:5:1
+Module not found: Can't resolve './sidebarClient'
+[0m [90m 3 |[39m [36mimport[39m { authOptions } [36mfrom[39m [32m'@/lib/auth'[39m
+ [90m 4 |[39m [36mimport[39m { prisma } [36mfrom[39m [32m'@/lib/prisma'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mSidebarClient[39m [36mfrom[39m [32m'./sidebarClient'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mexport[39m [36mdefault[39m [36masync[39m [36mfunction[39m [33mChatLayout[39m({ children }[33m:[39m { children[33m:[39m [33mReactNode[39m }) {
+ [90m 8 |[39m 	[36mconst[39m session [33m=[39m [36mawait[39m getServerSession(authOptions)[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./app/chat/layout.tsx:5:1
+Module not found: Can't resolve './sidebarClient'
+[0m [90m 3 |[39m [36mimport[39m { authOptions } [36mfrom[39m [32m'@/lib/auth'[39m
+ [90m 4 |[39m [36mimport[39m { prisma } [36mfrom[39m [32m'@/lib/prisma'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m [33mSidebarClient[39m [36mfrom[39m [32m'./sidebarClient'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36mexport[39m [36mdefault[39m [36masync[39m [36mfunction[39m [33mChatLayout[39m({ children }[33m:[39m { children[33m:[39m [33mReactNode[39m }) {
+ [90m 8 |[39m 	[36mconst[39m session [33m=[39m [36mawait[39m getServerSession(authOptions)[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ [Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.] {
+  digest: '4023240000'
+}
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:10:65)
+   8 | 	const session = await getServerSession(authOptions)
+   9 | 	if (!session?.user?.id) return notFound()
+> 10 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  11 | 	if (!chat) return notFound()
+  12 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  13 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:10:65)
+   8 | 	const session = await getServerSession(authOptions)
+   9 | 	if (!session?.user?.id) return notFound()
+> 10 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  11 | 	if (!chat) return notFound()
+  12 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  13 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:10:65)
+   8 | 	const session = await getServerSession(authOptions)
+   9 | 	if (!session?.user?.id) return notFound()
+> 10 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  11 | 	if (!chat) return notFound()
+  12 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  13 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:10:65)
+   8 | 	const session = await getServerSession(authOptions)
+   9 | 	if (!session?.user?.id) return notFound()
+> 10 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  11 | 	if (!chat) return notFound()
+  12 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  13 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:10:65)
+   8 | 	const session = await getServerSession(authOptions)
+   9 | 	if (!session?.user?.id) return notFound()
+> 10 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  11 | 	if (!chat) return notFound()
+  12 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  13 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:10:65)
+   8 | 	const session = await getServerSession(authOptions)
+   9 | 	if (!session?.user?.id) return notFound()
+> 10 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  11 | 	if (!chat) return notFound()
+  12 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  13 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:10:65)
+   8 | 	const session = await getServerSession(authOptions)
+   9 | 	if (!session?.user?.id) return notFound()
+> 10 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  11 | 	if (!chat) return notFound()
+  12 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  13 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/api/chats/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at PATCH (app\api\chats\[id]\route.ts:21:23)
+  19 | 	}
+  20 | 	const updated = await prisma.chat.update({
+> 21 | 		where: { id: params.id },
+     | 		                    ^
+  22 | 		data: { title: title.trim() },
+  23 | 	})
+  24 | 	return NextResponse.json(updated)
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException: [Error: aborted] { code: 'ECONNRESET' }
+ ⨯ uncaughtException:  [Error: aborted] { code: 'ECONNRESET' }
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/api/chats/[id]/messages" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at POST (app\api\chats\[id]\messages\route.ts:22:65)
+  20 | 	const session = await getSessionOrBypass()
+  21 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 22 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  23 | 	if (!chat) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+  24 |
+  25 | 	const { content } = await req.json()
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/api/chats/[id]/messages" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at POST (app\api\chats\[id]\messages\route.ts:22:65)
+  20 | 	const session = await getSessionOrBypass()
+  21 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 22 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  23 | 	if (!chat) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+  24 |
+  25 | 	const { content } = await req.json()
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/api/chats/[id]/messages" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at POST (app\api\chats\[id]\messages\route.ts:22:65)
+  20 | 	const session = await getSessionOrBypass()
+  21 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 22 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  23 | 	if (!chat) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+  24 |
+  25 | 	const { content } = await req.json()
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+Error: Route "/api/chats/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at DELETE (app\api\chats\[id]\route.ts:30:49)
+  28 | 	const session = await getSessionOrBypass()
+  29 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 30 | 	await prisma.chat.delete({ where: { id: params.id } })
+     | 	                                               ^
+  31 | 	return NextResponse.json({ ok: true })
+  32 | }
+  33 |
+Error: Route "/api/chats/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at DELETE (app\api\chats\[id]\route.ts:30:49)
+  28 | 	const session = await getSessionOrBypass()
+  29 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 30 | 	await prisma.chat.delete({ where: { id: params.id } })
+     | 	                                               ^
+  31 | 	return NextResponse.json({ ok: true })
+  32 | }
+  33 |
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+Error: Route "/api/chats/[id]/messages" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at POST (app\api\chats\[id]\messages\route.ts:22:65)
+  20 | 	const session = await getSessionOrBypass()
+  21 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 22 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  23 | 	if (!chat) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+  24 |
+  25 | 	const { content } = await req.json()
+Error: Route "/api/chats/[id]/messages" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at POST (app\api\chats\[id]\messages\route.ts:22:65)
+  20 | 	const session = await getSessionOrBypass()
+  21 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 22 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  23 | 	if (!chat) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+  24 |
+  25 | 	const { content } = await req.json()
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+Error: Route "/api/chats/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at DELETE (app\api\chats\[id]\route.ts:30:49)
+  28 | 	const session = await getSessionOrBypass()
+  29 | 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+> 30 | 	await prisma.chat.delete({ where: { id: params.id } })
+     | 	                                               ^
+  31 | 	return NextResponse.json({ ok: true })
+  32 | }
+  33 |
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+Error: Route "/chat/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ChatPage (app\chat\[id]\page.tsx:9:65)
+   7 | 	const session = await getSessionOrBypass()
+   8 | 	if (!session?.user?.id) return notFound()
+>  9 | 	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+     | 	                                                               ^
+  10 | 	if (!chat) return notFound()
+  11 | 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
+  12 | 	return <ChatClient chatId={chat.id} chatTitle={chat.title} initialMessages={messages} />
