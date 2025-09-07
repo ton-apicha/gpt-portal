@@ -1,0 +1,233 @@
+
+> ai-portal@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.2 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.169.0.67:3000
+
+ ✓ Starting...
+ ✓ Ready in 895ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1763ms
+ GET / 200 in 823ms
+ GET / 200 in 638ms
+ GET / 200 in 64ms
+ GET / 200 in 81ms
+ ✓ Compiled /favicon.ico in 109ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 392ms
+ GET / 200 in 73ms
+ GET / 200 in 60ms
+ GET / 200 in 78ms
+ GET / 200 in 69ms
+ GET / 200 in 51ms
+ ✓ Compiled / in 48ms
+ GET / 200 in 301ms
+ GET / 200 in 310ms
+ ✓ Compiled /api/auth/[...nextauth] in 313ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 318ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 247ms
+ POST /api/auth/_log 405 in 1263ms
+ POST /api/auth/_log 405 in 1271ms
+ GET /api/auth/session 405 in 1126ms
+ POST /api/auth/_log 405 in 258ms
+ ✓ Compiled in 7ms
+ ✓ Compiled middleware in 66ms
+ ✓ Compiled middleware in 8ms
+ ✓ Compiled in 177ms
+ ✓ Compiled middleware in 2ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 844ms
+ GET / 404 in 3ms
+ GET / 404 in 1ms
+ ✓ Compiled /_not-found/page in 177ms
+ GET /favicon.ico 500 in 201ms
+ ✓ Compiled middleware in 5ms
+ ✓ Compiled in 42ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled in 26ms
+ GET / 404 in 1ms
+ GET /favicon.ico 200 in 300ms
+ ✓ Compiled /register in 187ms
+ GET /register 200 in 272ms
+ GET / 404 in 2ms
+ ✓ Compiled /_not-found/page in 28ms
+ GET /favicon.ico 200 in 254ms
+ GET / 404 in 3ms
+ GET /favicon.ico 200 in 250ms
+ ✓ Compiled /register in 17ms
+ GET /register 200 in 80ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 246ms
+ GET /api/auth/session 200 in 335ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 257ms
+ ✓ Compiled /api/register in 91ms
+ POST /api/register 200 in 400ms
+ ✓ Compiled /login in 162ms
+ GET /login 200 in 198ms
+ GET /api/auth/providers 200 in 273ms
+ GET /api/auth/csrf 200 in 266ms
+ POST /api/auth/callback/credentials 200 in 311ms
+ GET /api/auth/session 200 in 287ms
+ GET / 404 in 1ms
+ GET / 404 in 2ms
+ ✓ Compiled middleware in 4ms
+ ✓ Compiled in 38ms
+ ✓ Compiled / in 20ms
+ GET / 200 in 112ms
+ GET / 200 in 147ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 295ms
+ GET /api/auth/session 200 in 273ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 263ms
+ GET /api/auth/session 200 in 273ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 254ms
+ GET /api/auth/session 200 in 266ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 246ms
+ GET /login 200 in 70ms
+ GET /login 200 in 71ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 242ms
+ GET /api/auth/session 200 in 250ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 249ms
+ GET /api/auth/session 200 in 257ms
+ GET /api/auth/providers 200 in 262ms
+ GET /api/auth/csrf 200 in 256ms
+ POST /api/auth/callback/credentials 200 in 329ms
+ GET /api/auth/session 200 in 256ms
+ GET / 200 in 47ms
+ ✓ Compiled middleware in 1ms
+ GET / 200 in 120ms
+ GET / 200 in 101ms
+ GET / 404 in 98ms
+ GET / 200 in 184ms
+ GET / 200 in 180ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 270ms
+ GET /api/auth/session 200 in 331ms
+ GET /api/auth/session 200 in 253ms
+ ✓ Compiled middleware in 2ms
+ GET / 200 in 118ms
+ GET / 200 in 104ms
+ GET / 200 in 58ms
+ GET / 200 in 59ms
+ ✓ Compiled /chat in 165ms
+ GET /chat 200 in 305ms
+ GET /chat 200 in 126ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 300ms
+ GET /api/auth/session 200 in 308ms
+ GET /api/auth/session 200 in 296ms
+ ✓ Compiled /api/chat in 91ms
+ POST /api/chat 200 in 3131ms
+ POST /api/chat 200 in 1041ms
+ GET /api/auth/session 200 in 324ms
+ GET /api/auth/session 200 in 343ms
+ GET /api/auth/session 200 in 329ms
+ GET /api/auth/session 200 in 314ms
+ GET /api/auth/session 200 in 315ms
+ GET /api/auth/session 200 in 304ms
+ ✓ Compiled in 51ms
+ POST /api/chat 200 in 34234ms
+ ✓ Compiled in 50ms
+ POST /api/chat 200 in 99617ms
+ POST /api/chat 200 in 363543ms
+ GET /chat 200 in 421ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 285ms
+ GET /api/auth/session 200 in 311ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 284ms
+ GET /api/auth/session 200 in 304ms
+ GET /api/auth/session 200 in 312ms
+ GET /api/auth/session 200 in 299ms
+ GET /api/auth/session 200 in 321ms
+ GET /api/auth/session 200 in 301ms
+ GET /api/auth/session 200 in 284ms
+ POST /api/chat 200 in 274459ms
+ GET /chat 200 in 130ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 293ms
+ GET /api/auth/session 200 in 275ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 284ms
+ GET /api/auth/session 200 in 294ms
+ GET /api/auth/session 200 in 315ms
+ GET /api/auth/session 200 in 326ms
+ GET /api/auth/session 200 in 314ms
+ ✓ Compiled middleware in 2ms
+ GET /chat 200 in 198ms
+ GET /chat 200 in 105ms
+ ✓ Compiled middleware in 2ms
+ GET /chat 200 in 208ms
+ ✓ Compiled /status in 302ms
+ GET /status 200 in 545ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 320ms
+ ✓ Compiled /api/health in 206ms
+ GET /api/auth/session 200 in 472ms
+ GET /api/health 200 in 603ms
+ GET /api/auth/session 200 in 371ms
+ GET /api/auth/session 200 in 319ms
+ GET /api/auth/session 200 in 316ms
+ GET /api/auth/session 200 in 306ms
+ GET /api/auth/session 200 in 303ms
+ GET /api/auth/session 200 in 304ms
+ GET /api/auth/session 200 in 307ms
+ GET /api/auth/session 200 in 309ms
+ GET /api/auth/session 200 in 313ms
+ GET /status 200 in 163ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 369ms
+ GET /api/health 200 in 354ms
+ GET /api/auth/session 200 in 368ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 337ms
+ GET /api/auth/session 200 in 308ms
+ GET /status 200 in 189ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 347ms
+ GET /api/health 200 in 347ms
+ GET /api/auth/session 200 in 358ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 327ms
+ GET /api/auth/session 200 in 311ms
+ GET /api/auth/session 200 in 322ms
+ GET /api/auth/session 200 in 306ms
+ POST /api/chat 500 in 60462ms
+ ✓ Compiled in 50ms
+ GET /api/auth/session 200 in 322ms
+ GET /api/auth/session 200 in 290ms
+ GET /status 200 in 113ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 372ms
+ GET /api/health 200 in 303ms
+ GET /api/auth/session 200 in 299ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 247ms
+ GET /api/auth/session 200 in 297ms
+ GET /api/auth/session 200 in 280ms
+ GET /api/auth/session 200 in 293ms
+ GET /api/auth/session 200 in 327ms
+ GET /api/auth/session 200 in 320ms
+ GET /status 200 in 146ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 406ms
+ GET /api/health 200 in 385ms
+ GET /api/auth/session 200 in 377ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 489ms
+ GET /api/auth/session 200 in 453ms
+ GET /api/auth/session 200 in 305ms
+ GET /api/auth/session 200 in 338ms
+ POST /api/chat?timeoutMs=30000 500 in 30436ms
+ ✓ Compiled in 50ms
+ GET /chat 200 in 233ms
+ GET /api/auth/session 200 in 359ms
+ GET /chat 200 in 111ms
+ GET /api/auth/session 200 in 295ms
+ ✓ Compiled in 39ms
+ GET /chat 200 in 255ms
+ GET /api/auth/session 200 in 178ms
+ POST /api/chat?timeoutMs=30000 200 in 2393ms
+ POST /api/chat?timeoutMs=30000 200 in 3409ms
+ POST /api/chat?timeoutMs=30000 200 in 3465ms
+ POST /api/chat?timeoutMs=30000 200 in 3480ms
+ POST /api/chat?timeoutMs=30000 200 in 3389ms
+ POST /api/chat?timeoutMs=30000 200 in 3386ms
+ POST /api/chat?timeoutMs=30000 200 in 3501ms
+ POST /api/chat?timeoutMs=30000 200 in 2841ms
+ GET /api/auth/session 200 in 295ms
+ GET /api/auth/session 200 in 290ms
+ GET /status 200 in 115ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 276ms
+ GET /api/health 200 in 326ms
+ GET /api/auth/session 200 in 326ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 266ms
+ GET /api/auth/session 200 in 290ms
+ GET /api/auth/session 200 in 282ms
+ GET /api/auth/session 200 in 264ms
+ GET /api/auth/session 200 in 260ms
+ GET /api/auth/session 200 in 251ms

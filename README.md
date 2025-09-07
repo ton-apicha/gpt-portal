@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GPT Portal (Next.js + Ollama)
 
-## Getting Started
+พอร์ทัลสำหรับสนทนากับโมเดลในเครื่องผ่าน Ollama พร้อมระบบล็อกอิน, สตรีมคำตอบแบบเรียลไทม์, หน้า Status และเทส E2E ด้วย Playwright
 
-First, run the development server:
+## คุณสมบัติหลัก
+- Login/Register ด้วย Credentials (NextAuth v4 + JWT)
+- ห้องแชท `/chat` สตรีมคำตอบ + ปุ่มหยุด + คีย์ลัด Enter/Shift+Enter
+- Proxy `/api/chat` → Ollama (`llama3.2-vision`) พร้อม timeout และจำกัดโทเค็น
+- `/status` แสดงสถานะระบบ (Ollama up/down, latency)
+- เทส E2E หน้าแชทด้วย Playwright (mock stream)
 
+## ความต้องการระบบ
+- Node.js 18+ (แนะนำ LTS/ใหม่กว่า)
+- Windows/Mac/Linux
+- Ollama 0.11+ และโมเดล `llama3.2-vision`
+
+## การติดตั้ง
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 1) ติดตั้ง dependencies
+npm install
+
+# 2) สร้างฐานข้อมูลและ Prisma Client
+npx prisma generate
+npx prisma migrate dev --name init --skip-generate
+
+# 3) ดึงโมเดล (ฝั่งเครื่องคุณ)
+ollama pull llama3.2-vision
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## การรัน Dev Server
+```bash
+# แนะนำใช้สคริปต์บน Windows เพื่อกันเทอร์มินัลค้าง
+./dev.ps1
+# หรือ
+npm run dev
+```
+- เปิดเว็บ: `http://localhost:3000`
+- ห้องแชท: `http://localhost:3000/chat`
+- สเตตัส: `http://localhost:3000/status`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## การเชื่อมต่อ Ollama
+ค่าเริ่มต้นจะใช้ `http://localhost:11434` หากรันพอร์ตอื่น ตั้งค่า Env ต่อไปนี้ได้
+```
+OLLAMA_BASE_URL=http://localhost:11434
+```
+สามารถตั้งผ่าน shell หรือไฟล์ `.env.local`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## การทดสอบ (Playwright)
+```bash
+# ติดตั้งบราวเซอร์ (ครั้งแรก)
+npx playwright install
 
-## Learn More
+# รันทดสอบทั้งหมด
+npm test
+```
+เทส `tests/chat.spec.ts` จะ mock `/api/chat` ให้สตรีมคำตอบจำลองเพื่อให้เทสรวดเร็วและเสถียร
 
-To learn more about Next.js, take a look at the following resources:
+## โครงสร้างโปรเจกต์
+```
+app/
+  api/
+    auth/[...nextauth]/route.ts  # NextAuth (Credentials)
+    chat/route.ts                 # Proxy ไป Ollama (สตรีม)
+    health/route.ts               # เช็คสถานะ Ollama
+  (auth)/login/page.tsx          # หน้า Login
+  (auth)/register/page.tsx       # หน้า Register
+  chat/page.tsx                  # ห้องแชท (UI โมเดิร์น)
+  status/page.tsx                # หน้า Status
+lib/
+  prisma.ts                      # Prisma Client singleton
+  auth.ts                        # ตัวเลือก/Callback ของ NextAuth
+prisma/
+  schema.prisma                  # สคีมา User/Chat/Message (SQLite)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Troubleshooting
+- หน้าช้าหรือค้าง: ตรวจ `/status` ว่า Ollama up และ latency ไม่สูง
+- "Failed to fetch": อาจ timeout จากฝั่ง API แนะนำรีเฟรช/ลดคำถาม/เพิ่ม `timeoutMs`
+- PSReadLine/PowerShell ค้าง: เปลี่ยนใช้ Command Prompt หรือรันผ่าน `dev.ps1`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy คร่าวๆ
+- Build: `npm run build` แล้ว `npm start`
+- ตั้งค่า Env: `NEXTAUTH_SECRET`, `OLLAMA_BASE_URL` และฐานข้อมูลตามจริง
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT

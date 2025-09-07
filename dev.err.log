@@ -1,0 +1,68 @@
+ ⨯ [Error [TypeError]: Cannot read properties of undefined (reading 'custom')]
+ ⨯ [Error [TypeError]: Cannot read properties of undefined (reading 'custom')]
+ ⨯ Error: The Middleware "/middleware" must export a `middleware` or a `default` function
+    at <unknown> (edge-wrapper.js:2:7)
+  1 | self._ENTRIES ||= {};
+> 2 | const modProm = import('MODULE');
+    |       ^
+  3 | modProm.catch(() => {});
+  4 | self._ENTRIES["middleware_middleware"] = new Proxy(modProm, {
+  5 |     get(modProm, name) {
+ ⨯ Error: The Middleware "/middleware" must export a `middleware` or a `default` function
+    at <unknown> (edge-wrapper.js:2:7)
+  1 | self._ENTRIES ||= {};
+> 2 | const modProm = import('MODULE');
+    |       ^
+  3 | modProm.catch(() => {});
+  4 | self._ENTRIES["middleware_middleware"] = new Proxy(modProm, {
+  5 |     get(modProm, name) {
+ ⨯ Error: The Middleware "/middleware" must export a `middleware` or a `default` function
+    at <unknown> (edge-wrapper.js:2:7)
+  1 | self._ENTRIES ||= {};
+> 2 | const modProm = import('MODULE');
+    |       ^
+  3 | modProm.catch(() => {});
+  4 | self._ENTRIES["middleware_middleware"] = new Proxy(modProm, {
+  5 |     get(modProm, name) {
+ ⨯ Error: The Middleware "/middleware" must export a `middleware` or a `default` function
+    at <unknown> (edge-wrapper.js:2:7)
+  1 | self._ENTRIES ||= {};
+> 2 | const modProm = import('MODULE');
+    |       ^
+  3 | modProm.catch(() => {});
+  4 | self._ENTRIES["middleware_middleware"] = new Proxy(modProm, {
+  5 |     get(modProm, name) {
+ ⨯ Error: The Middleware "/middleware" must export a `middleware` or a `default` function
+    at <unknown> (edge-wrapper.js:2:7)
+  1 | self._ENTRIES ||= {};
+> 2 | const modProm = import('MODULE');
+    |       ^
+  3 | modProm.catch(() => {});
+  4 | self._ENTRIES["middleware_middleware"] = new Proxy(modProm, {
+  5 |     get(modProm, name) {
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+ ⨯ Error: The Middleware "/middleware" must export a `middleware` or a `default` function
+    at <unknown> (edge-wrapper.js:2:7)
+  1 | self._ENTRIES ||= {};
+> 2 | const modProm = import('MODULE');
+    |       ^
+  3 | modProm.catch(() => {});
+  4 | self._ENTRIES["middleware_middleware"] = new Proxy(modProm, {
+  5 |     get(modProm, name) {
+ ⨯ Error: The Middleware "/middleware" must export a `middleware` or a `default` function
+    at <unknown> (edge-wrapper.js:2:7)
+  1 | self._ENTRIES ||= {};
+> 2 | const modProm = import('MODULE');
+    |       ^
+  3 | modProm.catch(() => {});
+  4 | self._ENTRIES["middleware_middleware"] = new Proxy(modProm, {
+  5 |     get(modProm, name) {
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NEXTAUTH_URL] 
+https://next-auth.js.org/warnings#nextauth_url
+[Error: failed to pipe response] { [cause]: 'timeout' }
+[Error: failed to pipe response] { [cause]: 'timeout' }
