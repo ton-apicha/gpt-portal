@@ -54,6 +54,18 @@ jobs:
           E2E_BYPASS_AUTH: '1'
         run: npx playwright test --reporter=line
 
+      - name: Run unit tests with coverage
+        run: npm run coverage
+
+      - name: Upload coverage to Codecov
+        if: success()
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ai-portal/coverage/lcov.info
+          flags: unit
+          fail_ci_if_error: false
+
       - name: Upload Playwright report on failure
         if: failure()
         uses: actions/upload-artifact@v4
