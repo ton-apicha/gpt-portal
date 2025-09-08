@@ -68,6 +68,13 @@ export default function ChatClient({ chatId, chatTitle, initialMessages }: { cha
 		})()
 	}, [])
 
+	// Wire global chat:send event (from Ctrl/Cmd+Enter shortcut)
+	useEffect(() => {
+		const onSend = () => { if (!loading) { send() } }
+		window.addEventListener('chat:send', onSend as any)
+		return () => window.removeEventListener('chat:send', onSend as any)
+	}, [loading])
+
 	function stop(){
 		try { abortRef.current?.abort() } catch {}
 		// ถ้ากำลัง thinking ให้พับและปล่อยคำตอบที่บัฟเฟอร์ไว้
