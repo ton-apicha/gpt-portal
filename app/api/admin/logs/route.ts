@@ -16,16 +16,26 @@ export async function GET(req: NextRequest) {
     const userId = sp.get('user') || ''
     const chatId = sp.get('chat') || ''
 
-    const where: string[] = []
-    if (level) where.push(`level = '${level.replace(/'/g, "''")}'`)
-    if (event) where.push(`event LIKE '%${event.replace(/'/g, "''")}%'`)
-    if (userId) where.push(`userId = '${userId.replace(/'/g, "''")}'`)
-    if (chatId) where.push(`chatId = '${chatId.replace(/'/g, "''")}'`)
+    const whereClauses: Prisma.Sql[] = []
+    if (level) whereClauses.push(Prisma.sql`level = ${level}`)
+    if (event) whereClauses.push(Prisma.sql`event LIKE ${'%' + event + '%'}`)
+    if (userId) whereClauses.push(Prisma.sql`userId = ${userId}`)
+    if (chatId) whereClauses.push(Prisma.sql`chatId = ${chatId}`)
+
+    const whereSql = whereClauses.length > 0
+        ? Prisma.sql`WHERE ${Prisma.join(whereClauses, Prisma.sql` AND `)}`
+        : Prisma.sql``
 
     let rows: any[] = []
     try {
-        const whereSql = where.length ? `WHERE ${where.join(' AND ')}` : ''
-        rows = await prisma.$queryRawUnsafe<any[]>(`SELECT datetime(createdAt) as createdAt, level, event, userId, chatId, model, message FROM Logs ${whereSql} ORDER BY createdAt DESC LIMIT ${limit}`)
+        const q = Prisma.sql`
+            SELECT datetime(createdAt) as createdAt, level, event, userId, chatId, model, message
+            FROM Logs
+            ${whereSql}
+            ORDER BY createdAt DESC
+            LIMIT ${limit}
+        `
+        rows = await prisma.$queryRaw<any[]>(q)
     } catch {}
     return NextResponse.json({ items: rows })
 }
