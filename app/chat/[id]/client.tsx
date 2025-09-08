@@ -329,6 +329,21 @@ export default function ChatClient({ chatId, chatTitle, initialMessages }: { cha
 						>
 							＋
 						</button>
+						{/* Prompt actions menu */}
+						<div className="relative">
+							<details>
+								<summary className="list-none rounded-lg px-2 py-1 text-sm text-white/70 hover:bg-white/10 cursor-pointer" aria-label="Prompt menu">⋯</summary>
+								<div className="absolute right-0 z-10 mt-1 min-w-40 rounded-md border border-white/10 bg-gray-900 p-1 text-xs shadow-lg">
+									<button onClick={()=> fileInputRef.current?.click()} className="block w-full rounded px-2 py-1 text-left hover:bg-white/10">แนบรูปภาพ…</button>
+									<button onClick={()=> { setInput(''); setAttachments([]) }} className="block w-full rounded px-2 py-1 text-left hover:bg-white/10">ล้างข้อความ</button>
+									{loading ? (
+										<button onClick={stop} className="block w-full rounded px-2 py-1 text-left text-red-300 hover:bg-red-500/10">หยุด</button>
+									) : (
+										<button onClick={send} className="block w-full rounded px-2 py-1 text-left hover:bg-white/10" disabled={(input.trim().length === 0 && attachments.length === 0)}>ส่ง</button>
+									)}
+								</div>
+							</details>
+						</div>
 						<input
 							type="file"
 							accept="image/png,image/jpeg"
