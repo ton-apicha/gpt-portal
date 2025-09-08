@@ -26,11 +26,15 @@ export default async function AdminLogsPage() {
 		const event = sp.get('event') || ''
 		const user = sp.get('user') || ''
 		const chat = sp.get('chat') || ''
+		const limit = sp.get('limit') || ''
+		const before = sp.get('before') || ''
 		if (level) qs.set('level', level)
 		if (event) qs.set('event', event)
 		if (user) qs.set('user', user)
 		if (chat) qs.set('chat', chat)
-		qs.set('limit', '200')
+		if (limit) qs.set('limit', limit)
+		if (before) qs.set('before', before)
+		if (!qs.has('limit')) qs.set('limit', '200')
 		const res = await fetch(`${base}/api/admin/logs?${qs.toString()}`, { cache: 'no-store' })
 		const json = res.ok ? await res.json() : { items: [] }
 		items = (json.items as any[]) || []
@@ -52,7 +56,7 @@ function LogsClient({ base, items }: { base: string; items: any[] }){
 	return (
 		<div className="space-y-3">
 			<Filters base={base} />
-			<Table items={items} />
+			<Table base={base} items={items} />
 		</div>
 	)
 }
@@ -81,6 +85,14 @@ function Filters({ base }: { base: string }){
 				<div className="text-white/60 text-xs">Chat</div>
 				<input name="chat" placeholder="chatId" className="rounded border border-white/10 bg-transparent px-2 py-1" />
 			</div>
+			<label className="ml-2">Limit
+				<select name="limit" defaultValue={typeof window === 'undefined' ? '200' : (new URLSearchParams(location.search).get('limit') || '200')} className="ml-1 rounded border border-white/10 bg-transparent px-2 py-1">
+					<option className="bg-gray-900" value="50">50</option>
+					<option className="bg-gray-900" value="100">100</option>
+					<option className="bg-gray-900" value="200">200</option>
+					<option className="bg-gray-900" value="500">500</option>
+				</select>
+			</label>
 			<button className="rounded border border-white/10 px-2 py-1 hover:bg-white/10">Apply</button>
 			<a
 				href={`${base}/api/admin/logs/export`}
@@ -90,7 +102,7 @@ function Filters({ base }: { base: string }){
 	)
 }
 
-function Table({ items }: { items: any[] }){
+function Table({ base, items }: { base: string; items: any[] }){
 	return (
 		<>
 			{(!items || items.length === 0) && (
@@ -124,9 +136,28 @@ function Table({ items }: { items: any[] }){
 						))}
 					</tbody>
 				</table>
+				<Pagination base={base} items={items} />
 			</div>
 			)}
 		</>
+	)
+}
+
+function Pagination({ base, items }: { base: string; items: any[] }){
+	const current = typeof window === 'undefined' ? '' : location.search
+	const sp = typeof window === 'undefined' ? new URLSearchParams() : new URLSearchParams(current)
+	const nextBefore = items && items.length > 0 ? encodeURIComponent(items[items.length - 1].createdAt) : ''
+	const withParams = (patch: Record<string, string>) => {
+		const n = new URLSearchParams(sp as any)
+		for (const [k, v] of Object.entries(patch)){
+			if (v) n.set(k, v); else n.delete(k)
+		}
+		return n.toString()
+	}
+	return (
+		<div className="flex items-center justify-end p-2 text-xs text-white/70">
+			<a href={`${base}/admin/logs?${withParams({ before: nextBefore })}`} className="rounded border border-white/10 px-2 py-1 hover:bg-white/10">Older →</a>
+		</div>
 	)
 }
 
