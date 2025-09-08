@@ -24,6 +24,7 @@ export default function ChatClient({ chatId, chatTitle, initialMessages }: { cha
 	const [atBottom, setAtBottom] = useState(true)
 	const [hasNewBelow, setHasNewBelow] = useState(false)
 	const [atTop, setAtTop] = useState(false)
+	const [highlightedId, setHighlightedId] = useState<string | null>(null)
 	const autoStartedRef = useRef(false)
 	const [models, setModels] = useState<string[]>([])
 	const [model, setModel] = useState<string>('llama3.2-vision')
@@ -74,6 +75,29 @@ export default function ChatClient({ chatId, chatTitle, initialMessages }: { cha
 		window.addEventListener('chat:send', onSend as any)
 		return () => window.removeEventListener('chat:send', onSend as any)
 	}, [loading])
+
+	// Scroll to message if URL has #messageId and highlight briefly
+	useEffect(() => {
+		function scrollToHash(h?: string){
+			try{
+				const hash = typeof h === 'string' && h ? h : (typeof location !== 'undefined' ? location.hash : '')
+				if (!hash) return
+				const id = decodeURIComponent(hash.replace(/^#/, ''))
+				if (!id) return
+				const el = document.getElementById(id)
+				if (!el) return
+				el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+				setHighlightedId(id)
+				setTimeout(() => setHighlightedId((v) => v === id ? null : v), 1600)
+			}catch{}
+		}
+		// initial
+		scrollToHash()
+		// on hash change
+		const onHash = () => scrollToHash()
+		window.addEventListener('hashchange', onHash)
+		return () => window.removeEventListener('hashchange', onHash)
+	}, [messages.length])
 
 	function stop(){
 		try { abortRef.current?.abort() } catch {}
@@ -211,7 +235,7 @@ export default function ChatClient({ chatId, chatTitle, initialMessages }: { cha
 			<main ref={scrollRef} className="relative flex-1 overflow-y-auto">
 				<div className="mx-auto max-w-3xl p-4 space-y-3">
 					{messages.map((m, i) => (
-						<div key={i}>
+						<div key={i} id={m.id ? String(m.id) : undefined} className={highlightedId && m.id === highlightedId ? 'ring-2 ring-yellow-400/50 rounded-xl p-1 -m-1' : undefined}>
 							<div className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
 								<div className={`${m.role === 'user' ? 'bg-blue-600' : 'bg-gray-800'} relative max-w-2xl whitespace-pre-wrap break-words rounded-2xl px-4 py-3`}>
 									{m.role === 'assistant' ? (
