@@ -1,11 +1,9 @@
 import { getSessionOrBypass } from '@/lib/session'
 import { headers } from 'next/headers'
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
+import AutoRefresh from './autoRefresh'
 
 export const metadata: Metadata = { title: 'Admin • Logs • AI Portal' }
-
-const AutoRefresh = dynamic(() => import('./autoRefresh'), { ssr: false })
 
 export default async function AdminLogsPage() {
 	const session = await getSessionOrBypass()
