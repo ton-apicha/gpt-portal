@@ -35,6 +35,7 @@ test.describe('Chat page', () => {
 	test('should send message and render streamed reply', async ({ page }) => {
 		await page.addInitScript(mockFetchStreamScript())
 		await page.goto('/chat')
+		await expect(page).toHaveURL(/\/chat\//)
 		const textarea = page.getByPlaceholder('พิมพ์ข้อความ...')
 		await textarea.fill('ทดสอบ')
 		await page.getByRole('button', { name: 'ส่ง' }).click()

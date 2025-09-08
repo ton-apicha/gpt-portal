@@ -16,20 +16,20 @@
 - เทส E2E ครอบคลุม CRUD แชท, สตรีม, Markdown/Copy, Upload รูป
 
 ## ความต้องการระบบ
-- Node.js 18+ (แนะนำ LTS)
+- Node.js 20+ (แนะนำ LTS)
 - Windows/Mac/Linux
-- Ollama 0.11+ และโมเดล `llama3.2-vision`
+- Ollama 0.11+ และโมเดล `llama3.2-vision` หรือ `gpt-oss:20b`
 
 ## การติดตั้ง
 ```bash
 # 1) ติดตั้ง dependencies
 npm install
 
-# 2) Prisma migrate
-npx prisma migrate dev --name init
+# 2) Prisma generate (ใช้ SQLite dev.db ที่ schema กำหนดอยู่แล้ว)
+npx prisma generate
 
 # 3) ดึงโมเดล (เครื่องคุณ)
-ollama pull llama3.2-vision
+ollama pull gpt-oss:20b
 ```
 
 ## การรัน Dev Server
@@ -45,6 +45,12 @@ npm run dev
 
 ## การเชื่อมต่อ Ollama
 ค่าเริ่มต้น `OLLAMA_BASE_URL=http://localhost:11434` สามารถตั้งผ่าน ENV หรือ `.env.local`
+ตั้งค่าโมเดลเริ่มต้น (แอดมิน):
+```bash
+curl -X PATCH http://localhost:3000/api/admin/settings \
+  -H 'x-e2e-role: ADMIN' -H 'content-type: application/json' \
+  -d '{"model":"gpt-oss:20b"}'
+```
 
 ### ติดตั้ง Ollama บน Windows และตั้ง PATH
 1. ดาวน์โหลดตัวติดตั้งจาก `https://ollama.com`
@@ -106,7 +112,12 @@ set E2E_BYPASS_AUTH=1  # PowerShell: $env:E2E_BYPASS_AUTH="1"
 # รันเทสทั้งหมด
 npm test
 ```
-รายการเทสสำคัญ: `tests/chat.spec.ts`, `tests/chat-crud.spec.ts`, `tests/chat-markdown.spec.ts`, `tests/chat-copy.spec.ts`, `tests/upload-image.spec.ts`, `tests/image-chat.spec.ts`
+รายการเทสสำคัญ: `tests/chat.spec.ts`, `tests/chat-infinite-scroll.spec.ts`, `tests/chat-markdown.spec.ts`, `tests/chat-copy.spec.ts`, `tests/image-chat.spec.ts`, `tests/chat-real.spec.ts`
+
+### รันเทสจริงกับโมเดลจริง (Prod config @ 3030)
+```bash
+PORT=3030 npx playwright test tests/chat-real.spec.ts --config=playwright.prod.config.ts
+```
 
 ## ตัวแปรแวดล้อม
 - `OLLAMA_BASE_URL` ค่าเริ่มต้น `http://localhost:11434`

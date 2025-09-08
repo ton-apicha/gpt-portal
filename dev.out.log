@@ -3825,3 +3825,1153 @@ Raw query failed. Code: `1`. Message: `near "exists": syntax error`
  ✓ Compiled in 69ms
  POST /api/chats/cmfadefhm00blw0lc3cprhz7e/messages?model=gpt-oss%3A20b 200 in 26627ms
  ✓ Compiled in 87ms
+ GET /api/auth/session 200 in 297ms
+ GET /api/auth/session 200 in 348ms
+ GET /api/auth/session 200 in 283ms
+ GET /api/auth/session 200 in 315ms
+ GET /api/auth/session 200 in 339ms
+ GET /api/auth/session 200 in 297ms
+ GET /api/auth/session 200 in 325ms
+ GET /api/auth/session 200 in 288ms
+ GET /api/auth/session 200 in 281ms
+ GET /api/admin/model 403 in 358ms
+ GET /admin/model 200 in 491ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 254ms
+ GET /api/auth/session 200 in 276ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 239ms
+ GET /api/auth/session 200 in 292ms
+ GET /api/auth/session 200 in 279ms
+ GET /admin 200 in 80ms
+ GET /api/auth/session 200 in 302ms
+ GET /api/auth/session 200 in 282ms
+ GET /api/auth/session 200 in 295ms
+ ✓ Compiled middleware in 5ms
+ ✓ Compiled in 50ms
+ ✓ Compiled in 68ms
+ GET /api/models 200 in 292ms
+ GET /api/auth/session 200 in 312ms
+ GET /api/auth/session 200 in 300ms
+ GET /api/auth/session 200 in 277ms
+ ✓ Compiled in 75ms
+ GET /api/models 200 in 278ms
+ ✓ Compiled in 79ms
+ GET / 307 in 132ms
+ GET /login 200 in 108ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 341ms
+ GET /api/auth/session 200 in 313ms
+ GET /api/auth/providers 200 in 296ms
+ GET /api/auth/csrf 200 in 282ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Logs`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+ POST /api/auth/callback/credentials 401 in 303ms
+ POST /api/admin/logs 200 in 490ms
+ GET /api/auth/providers 200 in 284ms
+ GET /api/auth/csrf 200 in 299ms
+ POST /api/auth/callback/credentials 401 in 295ms
+ POST /api/admin/logs 200 in 427ms
+ GET /api/auth/session 200 in 288ms
+ GET /api/auth/session 200 in 299ms
+ GET /api/auth/session 200 in 272ms
+ GET /register 200 in 108ms
+ GET /api/auth/session 200 in 292ms
+ POST /api/register 400 in 275ms
+ POST /api/register 200 in 346ms
+ GET /api/auth/session 200 in 287ms
+ GET /api/auth/session 200 in 283ms
+ GET /api/auth/session 200 in 294ms
+ GET /admin/users 200 in 61ms
+ GET /admin/users 200 in 89ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 263ms
+ GET /api/auth/session 200 in 310ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 261ms
+ GET /api/auth/session 200 in 290ms
+ GET /api/auth/session 200 in 283ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /admin/stats 200 in 88ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /api/admin/stats/trends 200 in 307ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /api/admin/stats/trends 200 in 309ms
+ GET /admin/users 200 in 57ms
+ GET /admin/users 200 in 59ms
+ GET /admin 200 in 51ms
+ GET /admin/users 200 in 47ms
+ GET /api/admin/logs?limit=200 403 in 374ms
+ GET /admin/logs 200 in 475ms
+ GET /api/admin/model 403 in 471ms
+ GET /admin/model 200 in 577ms
+ GET /api/admin/system 403 in 374ms
+ GET /admin/system 200 in 467ms
+ GET /admin/settings 200 in 65ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Settings`
+ GET /api/admin/settings 500 in 372ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Settings`
+ GET /api/admin/settings 500 in 374ms
+ GET /api/admin/logs?limit=200 403 in 367ms
+ GET /admin/logs 200 in 444ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /admin/stats 200 in 72ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /api/admin/stats/trends 200 in 294ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /api/admin/stats/trends 200 in 294ms
+ GET /api/auth/providers 200 in 277ms
+ GET /api/auth/csrf 200 in 294ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+ POST /api/auth/callback/credentials 200 in 335ms
+ GET /api/auth/session 200 in 274ms
+ POST /api/admin/logs 200 in 296ms
+ GET / 200 in 59ms
+ GET /chat 200 in 105ms
+ GET /chat 200 in 100ms
+ GET /api/chats 200 in 280ms
+ GET /api/chats 200 in 290ms
+ GET /settings 200 in 96ms
+ GET /api/models 200 in 284ms
+ GET /api/auth/session 200 in 299ms
+ GET /api/auth/session 200 in 266ms
+ GET /settings 200 in 80ms
+ GET /api/models 200 in 293ms
+ GET /api/auth/session 200 in 300ms
+ GET /api/auth/session 200 in 275ms
+ POST /api/chats 201 in 300ms
+ GET /chat/cmfafp01f00ckw0lcj3x2y6sw?q=%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%AD%E0%B8%A2%E0%B8%B9%E0%B9%88%E0%B8%97%E0%B8%A7%E0%B8%B5%E0%B8%9B%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3 200 in 218ms
+ GET /api/models 200 in 270ms
+ GET /api/models 200 in 280ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Settings`
+ POST /api/chats/cmfafp01f00ckw0lcj3x2y6sw/messages?model=gpt-oss%3A20b 500 in 418ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Settings`
+ POST /api/chats/cmfafp01f00ckw0lcj3x2y6sw/messages?model=gpt-oss%3A20b 500 in 416ms
+ ✓ Compiled in 128ms
+ GET /api/auth/session 200 in 305ms
+ GET /api/auth/session 200 in 311ms
+ GET /api/auth/session 200 in 283ms
+ GET /api/auth/session 200 in 316ms
+ GET /api/auth/session 200 in 309ms
+ GET /api/auth/session 200 in 283ms
+ ✓ Compiled in 92ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /chat/cmfadefhm00blw0lc3cprhz7e 200 in 555ms
+ GET /admin/stats 200 in 560ms
+ GET /chat/cmfadefhm00blw0lc3cprhz7e 404 in 364ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 262ms
+ GET /api/auth/session 200 in 275ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 243ms
+ GET /api/auth/session 200 in 279ms
+ GET /api/auth/session 200 in 279ms
+ GET / 307 in 102ms
+ GET /chat 200 in 121ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 287ms
+ GET /api/auth/session 200 in 289ms
+ GET /api/chats 200 in 296ms
+ GET /api/auth/session 200 in 298ms
+ GET /api/auth/session 200 in 277ms
+ GET /api/auth/session 200 in 291ms
+ GET /chat/cmfadefhm00blw0lc3cprhz7e 404 in 147ms
+ GET /api/auth/session 200 in 333ms
+ GET /api/auth/session 200 in 297ms
+ GET / 307 in 123ms
+ GET /chat 200 in 116ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 271ms
+ GET /api/auth/session 200 in 321ms
+ GET /api/chats 200 in 328ms
+ GET /api/auth/session 200 in 292ms
+ GET /api/auth/session 200 in 325ms
+ GET /profile 200 in 140ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 298ms
+ GET /api/auth/session 200 in 280ms
+ GET /api/profile 200 in 286ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 290ms
+ GET /api/auth/session 200 in 324ms
+ GET /api/auth/session 200 in 271ms
+ GET /chat 200 in 106ms
+ GET /api/chats 200 in 364ms
+ GET /api/auth/session 200 in 369ms
+ GET /api/auth/session 200 in 302ms
+ GET /api/auth/session 200 in 296ms
+ GET /chat 200 in 110ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 300ms
+ GET /api/auth/session 200 in 287ms
+ GET /api/chats 200 in 293ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 286ms
+ GET /api/auth/session 200 in 287ms
+ GET /api/auth/session 200 in 281ms
+ GET /api/auth/session 200 in 282ms
+ GET /api/auth/session 200 in 359ms
+ GET /api/auth/session 200 in 285ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /admin/stats 200 in 143ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 249ms
+ GET /api/auth/session 200 in 292ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /api/admin/stats/trends 200 in 300ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 249ms
+ GET /api/auth/session 200 in 300ms
+ GET /api/auth/session 200 in 288ms
+ GET /api/auth/session 200 in 275ms
+ GET /api/auth/session 200 in 301ms
+ GET /api/auth/session 200 in 265ms
+ GET /chat 200 in 128ms
+ GET /api/auth/session 200 in 298ms
+ GET /api/chats 200 in 313ms
+ GET /api/auth/session 500 in 171ms
+ POST /api/auth/_log 500 in 132ms
+ GET /api/auth/session 500 in 141ms
+ GET /api/auth/session 500 in 115ms
+ POST /api/auth/_log 500 in 132ms
+ POST /api/auth/_log 500 in 76ms
+ GET /api/auth/session 500 in 82ms
+ POST /api/auth/_log 500 in 90ms
+ ✓ Compiled in 89ms
+ ✓ Compiled in 72ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /chat 200 in 159ms
+ GET /admin/stats 200 in 161ms
+ GET /settings 200 in 131ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 284ms
+ GET /api/auth/session 200 in 324ms
+ GET /api/models 200 in 342ms
+ GET /api/auth/session 200 in 298ms
+ GET /api/auth/session 200 in 295ms
+ GET /chat 200 in 112ms
+ GET /api/auth/session 200 in 288ms
+ GET /api/chats 200 in 304ms
+ GET /api/auth/session 200 in 304ms
+ GET /api/auth/session 200 in 287ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 407ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 420ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 372ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 393ms
+ ✓ Compiled in 69ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /api/admin/stats/trends?days=14 200 in 452ms
+ GET /chat 200 in 139ms
+ GET /api/auth/session 200 in 311ms
+ GET /api/chats 200 in 512ms
+ POST /api/chats 201 in 470ms
+ GET /api/chats 200 in 411ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 83ms
+ GET /api/models 200 in 258ms
+ GET /api/models 200 in 259ms
+ GET /chat 200 in 106ms
+ GET /api/auth/session 200 in 292ms
+ GET /api/chats 200 in 492ms
+ POST /api/chats 200 in 463ms
+ GET /api/chats 200 in 448ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 91ms
+ GET /api/models 200 in 268ms
+ GET /api/models 200 in 266ms
+ GET /chat 200 in 116ms
+ GET /api/auth/session 200 in 308ms
+ GET /api/chats 200 in 416ms
+ POST /api/chats 200 in 473ms
+ GET /api/chats 200 in 401ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 92ms
+ GET /api/models 200 in 268ms
+ GET /api/models 200 in 266ms
+ GET /chat 200 in 117ms
+ GET /api/auth/session 200 in 326ms
+ GET /api/chats 200 in 525ms
+ POST /api/chats 200 in 493ms
+ GET /api/chats 200 in 390ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 91ms
+ GET /api/models 200 in 266ms
+ GET /api/models 200 in 275ms
+ GET /api/auth/session 200 in 271ms
+ GET /api/auth/session 200 in 297ms
+ GET /api/auth/session 200 in 272ms
+ GET /settings 200 in 104ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 259ms
+ GET /api/auth/session 200 in 283ms
+ GET /api/models 200 in 292ms
+ GET /api/auth/session 200 in 289ms
+ GET /api/auth/session 200 in 287ms
+ GET /chat 200 in 107ms
+ GET /api/auth/session 200 in 293ms
+ GET /api/chats 200 in 307ms
+ GET /api/auth/session 200 in 276ms
+ GET /api/auth/session 200 in 279ms
+ GET /api/auth/session 200 in 315ms
+ GET /api/auth/session 200 in 286ms
+ GET /api/auth/session 200 in 276ms
+ ✓ Compiled in 105ms
+ ✓ Compiled /chat in 115ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /chat 200 in 600ms
+ GET /admin/stats 200 in 601ms
+ GET /chat 200 in 577ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 267ms
+ GET /api/auth/session 200 in 294ms
+ GET /api/chats 200 in 302ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 259ms
+ GET /api/auth/session 200 in 289ms
+ GET /api/auth/session 200 in 275ms
+ ✓ Compiled in 82ms
+ ✓ Compiled in 85ms
+ ✓ Compiled /chat in 62ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /admin/stats 200 in 179ms
+ GET /chat 200 in 341ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 364ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 388ms
+ GET /chat 200 in 231ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 352ms
+ GET /api/auth/session 200 in 409ms
+ GET /api/chats 200 in 418ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 500ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 295ms
+ GET /api/auth/session 200 in 285ms
+ GET /api/auth/session 200 in 290ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 396ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 376ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 401ms
+ GET /status 200 in 87ms
+ GET /api/health 200 in 284ms
+ GET /api/health 200 in 287ms
+ GET /api/chats 200 in 299ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 381ms
+ GET /api/chats 200 in 279ms
+ GET /admin 200 in 93ms
+ GET /api/chats 200 in 310ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 380ms
+ GET /api/chats 200 in 278ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 363ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 380ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 384ms
+ ✓ Compiled in 72ms
+ GET /chat 200 in 370ms
+ GET /chat 200 in 104ms
+ GET /api/chats 200 in 316ms
+ GET /api/auth/session 200 in 317ms
+ POST /api/chats 201 in 333ms
+ GET /chat/cmfahmprw00eaw0lcs6e3awri 200 in 97ms
+ GET /api/models 200 in 293ms
+ GET /api/models 200 in 296ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Settings`
+ POST /api/chats/cmfahmprw00eaw0lcs6e3awri/messages?model=gpt-oss%3A20b 500 in 448ms
+ GET /chat/cmfahmprw00eaw0lcs6e3awri 200 in 147ms
+ GET /api/auth/session 200 in 322ms
+ GET /api/chats 200 in 347ms
+ GET /api/models 200 in 348ms
+ GET /api/auth/session 200 in 337ms
+ GET /api/auth/session 200 in 338ms
+ GET /api/auth/session 200 in 286ms
+ GET /chat 200 in 1480ms
+ GET /chat 200 in 1512ms
+ GET /chat 200 in 1508ms
+ GET /chat 200 in 1525ms
+ GET /chat 200 in 1608ms
+ GET /chat 200 in 1677ms
+ GET /api/chats 200 in 1155ms
+ POST /api/chats 200 in 1161ms
+ GET /api/auth/session 200 in 1153ms
+ GET /api/auth/session 200 in 1032ms
+ GET /api/auth/session 200 in 1036ms
+ GET /api/auth/session 200 in 1027ms
+ GET /api/auth/session 200 in 1029ms
+ GET /api/auth/session 200 in 1035ms
+ GET /api/chats 200 in 1977ms
+ GET /api/chats 200 in 2057ms
+ GET /api/chats 200 in 2068ms
+ POST /api/chats 200 in 2086ms
+ GET /api/chats 200 in 2087ms
+ GET /api/chats 200 in 2063ms
+ POST /api/chats 200 in 2064ms
+ POST /api/chats 200 in 2066ms
+ POST /api/chats 200 in 2078ms
+ POST /api/chats 200 in 2099ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 1465ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 572ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 621ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 669ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 747ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 982ms
+ GET /api/models 200 in 477ms
+ GET /api/models 200 in 771ms
+ GET /api/models 200 in 796ms
+ GET /api/models 200 in 669ms
+ GET /api/models 200 in 691ms
+ GET /api/models 200 in 546ms
+ GET /api/auth/session 200 in 558ms
+ GET /api/chats 200 in 745ms
+ GET /chat 200 in 614ms
+ GET /api/models 200 in 645ms
+ GET /api/models 200 in 671ms
+ GET /chat?q=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5 200 in 975ms
+ GET /api/models 200 in 899ms
+ GET /chat 200 in 435ms
+ GET /api/auth/session 200 in 557ms
+ GET /api/chats 200 in 817ms
+ POST /api/chats 200 in 818ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 304ms
+ GET /api/auth/session 200 in 775ms
+ GET /api/chats 200 in 1049ms
+ POST /api/chats 200 in 1053ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij?q=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5 200 in 263ms
+ GET /api/chats 200 in 918ms
+ GET /api/models 200 in 663ms
+ GET /api/auth/session 200 in 925ms
+ POST /api/chats 200 in 1114ms
+ GET /api/models 200 in 402ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 393ms
+ GET /chat/cmfak0i5y0002w08ocw0k94uw 200 in 407ms
+ GET /api/models 200 in 350ms
+ GET /api/models 200 in 416ms
+ GET /api/auth/session 200 in 404ms
+ GET /api/chats 200 in 419ms
+ GET /chat 200 in 142ms
+ GET /api/auth/session 200 in 311ms
+ GET /api/chats 200 in 545ms
+ POST /api/chats 200 in 544ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 202ms
+ ✓ Compiled /_not-found/page in 327ms
+ GET /api/models 200 in 380ms
+ GET /api/auth/session 200 in 482ms
+ GET /api/chats 200 in 489ms
+ GET /uploads/mock.png 404 in 524ms
+ GET /api/auth/session 200 in 362ms
+ GET /api/auth/session 200 in 347ms
+ GET /api/auth/session 200 in 301ms
+ GET /chat 200 in 1546ms
+ GET /chat 200 in 1552ms
+ GET /chat 200 in 1630ms
+ GET /chat 200 in 1695ms
+ GET /chat 200 in 1757ms
+ GET /chat 200 in 1751ms
+ GET /api/auth/session 200 in 1647ms
+ GET /api/chats 200 in 1860ms
+ POST /api/chats 200 in 1914ms
+ GET /api/auth/session 200 in 1868ms
+ GET /api/auth/session 200 in 1658ms
+ GET /api/auth/session 200 in 2022ms
+ GET /api/auth/session 200 in 2032ms
+ GET /api/auth/session 200 in 2028ms
+ POST /api/chats 200 in 2480ms
+ GET /api/chats 200 in 2337ms
+ GET /api/chats 200 in 4487ms
+ POST /api/chats 200 in 4285ms
+ POST /api/chats 200 in 4288ms
+ POST /api/chats 200 in 4286ms
+ GET /api/chats 200 in 4301ms
+ POST /api/chats 200 in 4353ms
+ GET /api/chats 200 in 4310ms
+ GET /api/chats 200 in 4302ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 375ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 535ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 539ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 545ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 1083ms
+ GET /api/models 200 in 512ms
+ GET /api/chats 200 in 739ms
+ GET /api/auth/session 200 in 762ms
+ GET /chat?q=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5 200 in 617ms
+ GET /chat 200 in 910ms
+ GET /chat 200 in 955ms
+ GET /api/auth/session 200 in 945ms
+ GET /api/chats 200 in 1399ms
+ POST /api/chats 200 in 1403ms
+ GET /chat 200 in 1188ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij?q=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5 200 in 748ms
+ GET /api/chats 200 in 1606ms
+ GET /api/auth/session 200 in 1578ms
+ GET /api/auth/session 200 in 1574ms
+ POST /api/chats 200 in 2172ms
+ GET /api/chats 200 in 2180ms
+ POST /api/chats 200 in 2197ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 418ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 444ms
+ GET /api/auth/session 200 in 1123ms
+ GET /api/chats 200 in 1819ms
+ POST /api/chats 200 in 1823ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 741ms
+ GET /chat/cmfak5d680002w0jcw6llfsyr 200 in 771ms
+ GET /api/models 200 in 421ms
+ GET /api/auth/session 200 in 397ms
+ GET /api/chats 200 in 426ms
+ GET /api/auth/session 200 in 705ms
+ GET /api/models 200 in 737ms
+ GET /uploads/mock.png 404 in 728ms
+ GET /api/chats 200 in 933ms
+ GET /chat 200 in 511ms
+ GET /chat 200 in 540ms
+ GET /chat 200 in 561ms
+ GET /chat 200 in 984ms
+ GET /chat 200 in 1029ms
+ GET /chat 200 in 1012ms
+ GET /api/chats 200 in 1000ms
+ POST /api/chats 200 in 1585ms
+ GET /api/auth/session 200 in 1541ms
+ GET /api/auth/session 200 in 1469ms
+ GET /api/auth/session 200 in 1471ms
+ POST /api/chats 200 in 1893ms
+ GET /api/chats 200 in 2088ms
+ POST /api/chats 200 in 2088ms
+ GET /api/chats 200 in 2089ms
+ GET /api/auth/session 200 in 1659ms
+ GET /api/chats 200 in 1690ms
+ POST /api/chats 200 in 1692ms
+ GET /api/chats 200 in 1849ms
+ POST /api/chats 200 in 1945ms
+ POST /api/chats 200 in 1917ms
+ GET /api/auth/session 200 in 1941ms
+ GET /api/auth/session 200 in 2132ms
+ GET /api/chats 200 in 2311ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 522ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 534ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 577ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 634ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 626ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 769ms
+ GET /chat 200 in 168ms
+ GET /api/models 200 in 569ms
+ GET /api/models 200 in 631ms
+ GET /api/models 200 in 641ms
+ GET /api/models 200 in 563ms
+ GET /api/models 200 in 566ms
+ GET /api/models 200 in 360ms
+ GET /api/models 200 in 561ms
+ GET /api/models 200 in 618ms
+ GET /api/models 200 in 716ms
+ GET /chat 200 in 554ms
+ GET /chat?q=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5 200 in 456ms
+ GET /api/chats 200 in 724ms
+ GET /api/auth/session 200 in 701ms
+ POST /api/chats 200 in 839ms
+ GET /chat 200 in 719ms
+ GET /api/auth/session 200 in 476ms
+ GET /api/chats 200 in 822ms
+ POST /api/chats 200 in 824ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 693ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 327ms
+ GET /api/chats 200 in 997ms
+ GET /api/auth/session 200 in 996ms
+ GET /api/auth/session 200 in 912ms
+ POST /api/chats 200 in 1307ms
+ GET /api/models 200 in 712ms
+ GET /api/chats 200 in 1250ms
+ POST /api/chats 200 in 1251ms
+ GET /api/auth/session 200 in 712ms
+ GET /api/chats 200 in 840ms
+ GET /api/models 200 in 737ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij?q=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5 200 in 196ms
+ GET /chat/cmfagcxxf00d2w0lcq6162jij 200 in 213ms
+ GET /chat/cmfak6oi10002w0d0pd6s6a53 200 in 364ms
+ GET /api/models 200 in 334ms
+ GET /api/models 200 in 404ms
+ GET /api/models 200 in 296ms
+ GET /api/models 200 in 192ms
+ GET /api/chats 200 in 196ms
+ GET /api/auth/session 200 in 188ms
+ GET /chat 200 in 195ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 296ms
+ GET /api/auth/session 200 in 342ms
+ GET /api/chats 200 in 355ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 465ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 271ms
+ GET /api/auth/session 200 in 295ms
+ GET /api/auth/session 200 in 270ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 373ms
+ GET /api/auth/session 200 in 370ms
+ GET /api/auth/session 200 in 321ms
+ GET /api/auth/session 200 in 295ms
+ GET / 307 in 153ms
+ GET /chat 200 in 111ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 317ms
+ GET /api/auth/session 200 in 334ms
+ GET /api/chats 200 in 340ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 417ms
+ GET /api/auth/session 200 in 284ms
+ GET /api/auth/session 200 in 295ms
+ GET /api/auth/session 200 in 287ms
+ GET /api/auth/session 200 in 294ms
+ GET /chat 200 in 116ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 300ms
+ GET /api/chats 200 in 299ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 381ms
+ GET /api/auth/session 200 in 381ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 380ms
+ GET /api/auth/session 200 in 293ms
+ GET /api/auth/session 200 in 286ms
+ GET /api/auth/session 200 in 298ms
+ GET /api/auth/session 200 in 482ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /admin/stats 200 in 290ms
+ GET /api/auth/session 200 in 344ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: Metrics`
+ GET /api/admin/stats/trends?days=14 200 in 356ms
+ GET /api/auth/session 200 in 299ms
+ GET /api/auth/session 200 in 300ms
+ GET /api/auth/session 200 in 551ms
+ GET /chat 200 in 150ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 265ms
+ GET /api/auth/session 200 in 304ms
+ GET /api/chats 200 in 311ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 401ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 262ms
+ GET /api/auth/session 200 in 267ms
+ GET /admin 200 in 78ms
+ GET /api/chats 200 in 283ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 378ms
+ GET /api/chats 200 in 269ms
+ GET /status 200 in 79ms
+ GET /api/health 200 in 283ms
+ GET /api/health 200 in 284ms
+ GET /api/chats 200 in 303ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 386ms
+ GET /api/chats 200 in 290ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 367ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 372ms
+ ✓ Compiled /chat in 79ms
+ GET /chat 200 in 449ms
+ GET /admin/stats 200 in 513ms
+ GET /chat 200 in 160ms
+ GET /admin/stats 200 in 144ms
+ GET /chat 200 in 148ms
+ GET /admin/stats 200 in 141ms
+ GET /chat 200 in 159ms
+ GET /admin/stats 200 in 154ms
+ GET /chat 200 in 116ms
+ GET /admin/stats 200 in 125ms
+ GET /chat 200 in 125ms
+ GET /admin/stats 200 in 133ms
+ GET /chat 200 in 161ms
+ GET /admin/stats 200 in 285ms
+ GET /chat 200 in 402ms
+ GET /admin/stats 200 in 334ms
+ GET /chat 200 in 258ms
+ GET /admin/stats 200 in 160ms
+ ✓ Compiled in 81ms
+ GET /chat 200 in 176ms
+ GET /admin/stats 200 in 178ms
+ GET /api/auth/session 200 in 309ms
+ GET /api/auth/session 200 in 289ms
+ GET /chat 200 in 368ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 339ms
+ GET /api/auth/session 200 in 437ms
+ GET /api/chats 200 in 453ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 576ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 290ms
+ GET /api/auth/session 200 in 300ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 358ms
+ GET /admin/stats 200 in 167ms
+ GET /api/auth/session 200 in 403ms
+ GET /api/admin/stats/trends?days=14 200 in 420ms
+ GET /api/auth/session 200 in 289ms
+ GET /api/auth/session 200 in 288ms
+ GET /api/auth/session 200 in 304ms
+ GET /api/auth/session 200 in 275ms
+ GET /api/auth/session 200 in 284ms
+ GET /api/auth/session 200 in 278ms
+ GET /api/auth/session 200 in 293ms
+ GET /api/auth/session 200 in 300ms
+ GET /api/auth/session 200 in 282ms
+ GET /api/auth/session 200 in 293ms
+ GET /api/auth/session 200 in 302ms
+ GET /api/auth/session 200 in 293ms
+ GET /chat 200 in 113ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 291ms
+ GET /api/auth/session 200 in 301ms
+ GET /api/chats 200 in 313ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 392ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 254ms
+ GET /api/auth/session 200 in 294ms
+ GET / 307 in 108ms
+ GET /chat 200 in 91ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 558ms
+ GET /api/auth/session 200 in 559ms
+ GET /api/chats 200 in 569ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 656ms
+ GET /api/auth/session 200 in 301ms
+ GET /api/auth/session 200 in 272ms
+ GET / 307 in 143ms
+ GET /chat 200 in 115ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 319ms
+ GET /api/auth/session 200 in 334ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 425ms
+ GET /api/chats 200 in 424ms
+ GET /api/auth/session 200 in 287ms
+ GET /api/auth/session 200 in 280ms
+ GET /api/auth/session 200 in 289ms
+ GET /sessions 200 in 107ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 290ms
+ GET /api/auth/session 200 in 298ms
+ GET /api/sessions 200 in 311ms
+ GET /api/auth/session 200 in 292ms
+ GET /chat 200 in 104ms
+ GET /api/auth/session 200 in 357ms
+ GET /api/chats 200 in 373ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create()` invocation in
+D:\VSCode\gpt\ai-portal\.next\server\chunks\[root-of-the-server]__906d74ed._.js:500:151
+
+  497         });
+  498     }
+  499 } catch  {}
+→ 500 const chat = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].chat.create(
+Foreign key constraint violated on the foreign key
+ POST /api/chats 500 in 486ms
+ GET /api/auth/session 200 in 302ms
+ POST /api/admin/logs 200 in 378ms
+ GET /api/auth/csrf 200 in 294ms
+ POST /api/auth/signout 200 in 297ms
+ GET /login 200 in 126ms
+ GET /api/auth/session 200 in 260ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 322ms
+ GET /api/auth/session 200 in 326ms
+ GET /api/auth/session 200 in 342ms
+ GET /api/auth/providers 200 in 303ms
+ GET /api/auth/csrf 200 in 273ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+ POST /api/auth/callback/credentials 401 in 288ms
+ POST /api/admin/logs 200 in 338ms
+ GET /api/auth/providers 200 in 298ms
+ GET /api/auth/csrf 200 in 285ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+ POST /api/auth/callback/credentials 401 in 283ms
+ POST /api/admin/logs 200 in 274ms
+ GET /reset 200 in 126ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 319ms
+ GET /api/auth/session 200 in 312ms
+ GET /api/auth/session 200 in 299ms
+ GET /login 200 in 131ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 278ms
+ GET /api/auth/session 200 in 284ms
+ GET /api/auth/session 200 in 274ms
+ GET /api/auth/providers 200 in 259ms
+ GET /api/auth/csrf 200 in 276ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+ POST /api/auth/callback/credentials 401 in 299ms
+ POST /api/admin/logs 200 in 285ms
+ GET /api/auth/providers 200 in 310ms
+ GET /api/auth/csrf 200 in 291ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+ POST /api/auth/callback/credentials 401 in 302ms
+ POST /api/admin/logs 200 in 308ms
+ POST /api/register 200 in 313ms
+ GET /login 200 in 104ms
+ GET /api/auth/session 200 in 323ms
+ GET /api/auth/providers 200 in 294ms
+ GET /api/auth/csrf 200 in 274ms
+prisma:error 
+Invalid `prisma.$queryRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+prisma:error 
+Invalid `prisma.$executeRawUnsafe()` invocation:
+
+
+Raw query failed. Code: `1`. Message: `no such table: LoginAttempts`
+ POST /api/auth/callback/credentials 200 in 338ms
+ GET /api/auth/session 200 in 300ms
+ POST /api/admin/logs 200 in 300ms
+ GET / 200 in 57ms
+ GET /chat 200 in 129ms
+ GET /chat 200 in 158ms
+ GET /api/auth/session 200 in 313ms
+ GET /api/chats 200 in 337ms
+ POST /api/chats 201 in 345ms
+ ✓ Compiled /chat/[id] in 31ms
+ GET /chat/cmfb2d34e00k3w0lcv4objr0m 200 in 213ms
+ GET /api/models 200 in 274ms
+ GET /api/models 200 in 139ms
+ PATCH /api/admin/settings 200 in 396ms

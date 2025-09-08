@@ -26,6 +26,7 @@ function mockStreamMarkdown() {
 test('render markdown with code highlight', async ({ page }) => {
 	await page.addInitScript(mockStreamMarkdown())
 	await page.goto('/chat')
+	await expect(page).toHaveURL(/\/chat\//)
 	const textarea = page.getByPlaceholder('พิมพ์ข้อความ...')
 	await textarea.fill('ทดสอบ markdown')
 	await page.getByRole('button', { name: 'ส่ง' }).click()

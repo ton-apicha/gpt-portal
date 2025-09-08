@@ -33,6 +33,7 @@ test.describe('Image chat', () => {
   test.beforeEach(async ({ page }) => {
     await page.addInitScript(mockUploadAndStream())
     await page.goto('/chat')
+    await expect(page).toHaveURL(/\/chat\//)
   })
 
   test('preview shows after upload', async ({ page }) => {

@@ -16,12 +16,12 @@ export async function getSessionOrBypass() {
 	})
 	let role = user.role
 	try {
-		const hdrs = headers()
+		const hdrs = await headers()
 		const roleHeader = hdrs.get('x-e2e-role')
 		if (roleHeader) role = (roleHeader.toUpperCase() as any)
 	} catch {}
 	try {
-		const cookieStore = cookies()
+		const cookieStore = await cookies()
 		const cookieRole = cookieStore.get('e2e_role')?.value
 		if (cookieRole) role = (cookieRole.toUpperCase() as any)
 	} catch {}

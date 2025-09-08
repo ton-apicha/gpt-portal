@@ -3,13 +3,15 @@ import { getSessionOrBypass } from '@/lib/session'
 import { prisma } from '@/lib/prisma'
 import ChatClient from './client'
 
-export default async function ChatPage({ params, searchParams }: { params: { id: string }, searchParams: { q?: string } }) {
+export default async function ChatPage({ params, searchParams }: { params: Promise<{ id: string }>, searchParams: Promise<{ q?: string }> }) {
 	const session = await getSessionOrBypass()
 	if (!session?.user?.id) return notFound()
-	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+	const p = await params
+	const chat = await prisma.chat.findFirst({ where: { id: p.id, userId: session.user.id as string } })
 	if (!chat) return notFound()
 	const messages = await prisma.message.findMany({ where: { chatId: chat.id }, orderBy: { createdAt: 'asc' } })
-	const q = typeof searchParams?.q === 'string' ? searchParams.q : ''
+	const sp = await searchParams
+	const q = typeof sp?.q === 'string' ? sp.q : ''
 	if (q && q.trim()){
 		messages.push({ id: 'temp-q', chatId: chat.id, role: 'user', content: q.trim(), createdAt: new Date() } as any)
 	}

@@ -10,7 +10,7 @@ function mockStreamReply() {
 					const encoder = new TextEncoder()
 					const body = new ReadableStream<Uint8Array>({
 						start(controller) {
-							const chunks = ['เริ่ม', 'ตอบ', 'แล้ว']
+							const chunks = ['โอ', 'เ', 'ค']
 							let i = 0
 							function push(){
 								if (i < chunks.length) {
@@ -31,15 +31,17 @@ function mockStreamReply() {
 	)
 }
 
-test('click suggestion on /chat creates a chat and auto starts', async ({ page }) => {
-	await page.addInitScript(mockStreamReply())
+// 1) เข้าที่ /chat แล้วควรถูกพาไป /chat/{id} อัตโนมัติ
+test('visiting /chat auto-creates a chat and navigates', async ({ page }) => {
 	await page.goto('/chat', { waitUntil: 'domcontentloaded' })
-	// คลิกการ์ดคำแนะนำแรก
-	const firstSuggestion = page.locator('main button').first()
-	const text = await firstSuggestion.innerText()
-	await firstSuggestion.click()
 	await expect(page).toHaveURL(/\/chat\//)
-	// ต้องเห็นข้อความคำถาม (จาก q) และเริ่มสตรีมตอบ
-	await expect(page.getByText(text.split('\n')[0])).toBeVisible()
-	await expect(page.getByText('เริ่มตอบแล้ว')).toBeVisible({ timeout: 5000 })
+})
+
+// 2) ส่งต่อ ?q ไปยังหน้าที่สร้างใหม่และเริ่มถามอัตโนมัติ
+test('visiting /chat?q=... starts with the question and streams reply', async ({ page }) => {
+	await page.addInitScript(mockStreamReply())
+	await page.goto('/chat?q=สวัสดี', { waitUntil: 'domcontentloaded' })
+	await expect(page).toHaveURL(/\/chat\//)
+	await expect(page.getByText('สวัสดี')).toBeVisible()
+	await expect(page.getByText('โอเค')).toBeVisible({ timeout: 5000 })
 })

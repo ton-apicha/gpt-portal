@@ -26,6 +26,7 @@ function mockStreamCode() {
 test('copy code button copies code to clipboard', async ({ page }) => {
 	await page.addInitScript(mockStreamCode())
 	await page.goto('/chat')
+	await expect(page).toHaveURL(/\/chat\//)
 	const textarea = page.getByPlaceholder('พิมพ์ข้อความ...')
 	await textarea.fill('ส่งโค้ด')
 	await page.getByRole('button', { name: 'ส่ง' }).click()
@@ -36,9 +37,11 @@ test('copy code button copies code to clipboard', async ({ page }) => {
 	await expect(copyBtn).toHaveText(/คัดลอกแล้ว|คัดลอกโค้ด/)
 })
 
+
 test('copy whole assistant reply', async ({ page }) => {
 	await page.addInitScript(mockStreamCode())
 	await page.goto('/chat')
+	await expect(page).toHaveURL(/\/chat\//)
 	const textarea = page.getByPlaceholder('พิมพ์ข้อความ...')
 	await textarea.fill('ส่งคำตอบ')
 	await page.getByRole('button', { name: 'ส่ง' }).click()

@@ -36,8 +36,6 @@ test.describe('Chat minimal flow', () => {
   test('send message inside chat page and see reply', async ({ page }) => {
     await page.addInitScript(mockStreamReply())
     await page.goto('/chat')
-    // create new chat first from header
-    await page.getByRole('button', { name: 'New Chat' }).click()
     await expect(page).toHaveURL(/\/chat\//)
 
     const main = page.locator('main').first()
@@ -52,7 +50,6 @@ test.describe('Chat minimal flow', () => {
   test('copy icon copies assistant reply and shows feedback', async ({ page }) => {
     await page.addInitScript(mockStreamReply())
     await page.goto('/chat')
-    await page.getByRole('button', { name: 'New Chat' }).click()
     await expect(page).toHaveURL(/\/chat\//)
 
     const textarea = page.getByPlaceholder('พิมพ์ข้อความ...')

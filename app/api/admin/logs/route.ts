@@ -15,12 +15,14 @@ export async function GET(req: NextRequest) {
     const event = sp.get('event') || ''
     const userId = sp.get('user') || ''
     const chatId = sp.get('chat') || ''
+    const before = sp.get('before') || ''
 
     const whereClauses: Prisma.Sql[] = []
     if (level) whereClauses.push(Prisma.sql`level = ${level}`)
     if (event) whereClauses.push(Prisma.sql`event LIKE ${'%' + event + '%'}`)
     if (userId) whereClauses.push(Prisma.sql`userId = ${userId}`)
     if (chatId) whereClauses.push(Prisma.sql`chatId = ${chatId}`)
+    if (before) whereClauses.push(Prisma.sql`createdAt < ${before}`)
 
     const whereSql = whereClauses.length > 0
         ? Prisma.sql`WHERE ${Prisma.join(whereClauses, Prisma.sql` AND `)}`

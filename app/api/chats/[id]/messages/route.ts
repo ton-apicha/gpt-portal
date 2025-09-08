@@ -11,10 +11,11 @@ export const runtime = 'nodejs'
 
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://localhost:11434'
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
 	const session = await getSessionOrBypass()
 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+	const p = await params
+	const chat = await prisma.chat.findFirst({ where: { id: p.id, userId: session.user.id as string } })
 	if (!chat) return NextResponse.json({ error: 'Not found' }, { status: 404 })
 
 	const url = new URL(req.url)
@@ -40,10 +41,11 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 	return NextResponse.json({ messages: ordered, nextBeforeId })
 }
 
-export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
 	const session = await getSessionOrBypass()
 	if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-	const chat = await prisma.chat.findFirst({ where: { id: params.id, userId: session.user.id as string } })
+	const p = await params
+	const chat = await prisma.chat.findFirst({ where: { id: p.id, userId: session.user.id as string } })
 	if (!chat) return NextResponse.json({ error: 'Not found' }, { status: 404 })
 
 	const { content } = await req.json()

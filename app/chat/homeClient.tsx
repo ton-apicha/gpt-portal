@@ -2,6 +2,7 @@
 import { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 
+// NOTE: Deprecated landing UI. Kept for reference but no longer used by /chat.
 export default function ChatHomeClient(){
 	const router = useRouter()
 	const [input, setInput] = useState('')
@@ -36,7 +37,7 @@ export default function ChatHomeClient(){
 				<div className="mx-auto max-w-3xl px-4 py-16">
 					<div className="text-center space-y-3">
 						<div className="text-2xl font-semibold">เริ่มคุยกับผู้ช่วยของคุณ</div>
-						<div className="text-white/60">ถามอะไรก็ได้ เช่น “สรุปข่าววันนี้” หรือ “ช่วยอธิบายโค้ดนี้”</div>
+						<div className="text-white/60">พิมพ์ข้อความด้านล่างเพื่อสร้างแชทใหม่</div>
 					</div>
 					<div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
 						{['สรุปประชุมทีม', 'วางแผนเที่ยวเชียงใหม่ 3 วัน', 'อธิบาย Docker แบบเข้าใจง่าย'].map((ex, i)=>(
@@ -61,7 +62,6 @@ export default function ChatHomeClient(){
 						/>
 						<button type="submit" className="rounded-lg bg-blue-600 px-4 py-2 text-sm disabled:opacity-50" disabled={loading || input.trim().length===0}>เริ่มคุย</button>
 					</form>
-					<p className="mt-2 text-center text-xs text-white/40">นี่คือหน้าเริ่มต้นแบบ ChatGPT • เริ่มพิมพ์เพื่อสร้างแชทใหม่</p>
 				</div>
 			</footer>
 		</div>
