@@ -1,12 +1,15 @@
-import { redirect } from 'next/navigation'
 import { getSessionOrBypass } from '@/lib/session'
-import { prisma } from '@/lib/prisma'
+import ChatHomeClient from './homeClient'
+import type { Metadata } from 'next'
 
-export default async function ChatIndexRedirect() {
+export const metadata: Metadata = { title: 'แชท • AI Portal' }
+
+export default async function ChatIndexPage() {
 	const session = await getSessionOrBypass()
-	if (!session?.user?.id) redirect('/login')
-	const chat = await prisma.chat.create({ data: { title: 'New Chat', userId: session.user.id as string } })
-	redirect(`/chat/${chat.id}`)
+	if (!session?.user?.id) {
+		return <div className="p-6 text-white">Unauthorized</div>
+	}
+	return <ChatHomeClient />
 }
 
 

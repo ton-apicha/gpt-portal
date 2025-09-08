@@ -46,6 +46,29 @@ npm run dev
 ## การเชื่อมต่อ Ollama
 ค่าเริ่มต้น `OLLAMA_BASE_URL=http://localhost:11434` สามารถตั้งผ่าน ENV หรือ `.env.local`
 
+### ติดตั้ง Ollama บน Windows และตั้ง PATH
+1. ดาวน์โหลดตัวติดตั้งจาก `https://ollama.com`
+2. ติดตั้งตามขั้นตอน จากนั้นรีสตาร์ต PowerShell/Terminal
+3. ตรวจสอบว่าเรียกใช้ได้:
+   ```bash
+   ollama --version
+   ```
+   - หากคำสั่งไม่พบ ให้เพิ่มโฟลเดอร์ติดตั้งลงใน PATH (เช่น `C:\Program Files\Ollama`):
+     - Windows Search → "Edit the system environment variables" → Environment Variables… → Path → New → ใส่โฟลเดอร์ของ `ollama.exe` → OK
+4. ดึงโมเดลที่ต้องใช้:
+   ```bash
+   ollama pull llama3.2-vision
+   ```
+5. หากรัน Ollama ไว้บนเครื่องอื่น ให้ตั้งค่าแอปนี้ชี้ไปยังเครื่องนั้น:
+   ```bash
+   # PowerShell
+   $env:OLLAMA_BASE_URL="http://<ip-or-host>:11434"
+   ```
+   หรือเพิ่มใน `.env.local`:
+   ```
+   OLLAMA_BASE_URL=http://<ip-or-host>:11434
+   ```
+
 ## API/เพจสำคัญ
 - `GET/POST /api/chats` สร้าง/รายการแชท (รวม `_count.messages`)
 - `GET/PATCH/DELETE /api/chats/[id]` อ่าน/เปลี่ยนชื่อ/ลบแชท

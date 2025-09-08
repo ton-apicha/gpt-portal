@@ -25,6 +25,18 @@ export async function POST(req: NextRequest) {
 		body = await req.json()
 	} catch {}
 	const title = typeof body?.title === 'string' && body.title.trim().length > 0 ? body.title.trim() : 'New Chat'
+
+	// Guard: หากผู้ใช้ยังมีแชทที่ไม่มีข้อความ อยู่แล้ว ให้คืนแชทนั้นแทนการสร้างใหม่
+	try {
+		const existingEmpty = await prisma.chat.findFirst({
+			where: { userId: session.user.id as string, messages: { none: {} } },
+			orderBy: { updatedAt: 'desc' },
+		})
+		if (existingEmpty) {
+			return NextResponse.json(existingEmpty, { status: 200 })
+		}
+	} catch {}
+
 	const chat = await prisma.chat.create({
 		data: { title, userId: session.user.id as string },
 	})

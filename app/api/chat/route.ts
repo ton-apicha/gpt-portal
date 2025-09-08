@@ -1,4 +1,5 @@
 import { NextRequest } from 'next/server'
+import { getAllSettings } from '@/lib/settings'
 
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || 'http://localhost:11434'
 
@@ -6,7 +7,13 @@ export async function POST(req: NextRequest) {
 	const { messages } = await req.json()
 	const encoder = new TextEncoder()
 	const url = new URL(req.url)
-	const timeoutMs = Number(url.searchParams.get('timeoutMs') ?? 30000)
+	const admin = await getAllSettings()
+	const timeoutMs = Number(url.searchParams.get('timeoutMs') ?? admin.timeoutMs ?? 90000)
+	const maxTokensRaw = parseInt(url.searchParams.get('maxTokens') || admin.maxTokens || '512')
+	const maxTokens = Math.max(64, Math.min(isNaN(maxTokensRaw) ? parseInt(admin.maxTokens || '512') : maxTokensRaw, 4096))
+	const model = url.searchParams.get('model') || admin.model || 'llama3.2-vision'
+	const temperature = parseFloat(url.searchParams.get('temperature') || admin.temperature || '0.7')
+	const top_p = parseFloat(url.searchParams.get('top_p') || admin.top_p || '0.9')
 
 	const stream = new ReadableStream<Uint8Array>({
 		start: async (controller) => {
@@ -18,13 +25,13 @@ export async function POST(req: NextRequest) {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({
-						model: 'llama3.2-vision',
+						model,
 						messages: (messages ?? []).map((m: any) => ({ role: m.role, content: m.content })),
 						stream: true,
 						options: {
-							num_predict: 128,
-							temperature: 0.7,
-							top_p: 0.9,
+							num_predict: maxTokens,
+							temperature,
+							top_p,
 						},
 					}),
 					signal: ac.signal,
@@ -59,11 +66,6 @@ export async function POST(req: NextRequest) {
 				clearTimeout(timer)
 				controller.close()
 			} catch (e: any) {
-				if (e?.name === 'AbortError') {
-					// ปิดสตรีมอย่างสุภาพ เพื่อไม่ให้ฝั่ง client โยน TypeError: Failed to fetch
-					controller.close()
-					return
-				}
 				controller.error(e)
 			}
 		},

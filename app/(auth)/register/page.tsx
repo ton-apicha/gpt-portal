@@ -1,31 +1,27 @@
 "use client"
-import { useState, FormEvent } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 
 export default function RegisterPage(){
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [name, setName] = useState('')
-	const [error, setError] = useState<string | null>(null)
-	const router = useRouter()
-
-	async function onSubmit(e: FormEvent){
+	const [msg, setMsg] = useState('')
+	async function submit(e: any){
 		e.preventDefault()
-		setError(null)
+		setMsg('')
 		const res = await fetch('/api/register', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password, name }) })
-		if (res.ok) router.replace('/login')
-		else setError('สมัครสมาชิกไม่สำเร็จ')
+		setMsg(res.ok ? 'สำเร็จ' : 'ไม่สำเร็จ')
 	}
 	return (
-		<div style={{ maxWidth: 360, margin: '80px auto' }}>
+		<div style={{ maxWidth: 420, margin: '80px auto' }}>
 			<h1 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>สมัครสมาชิก</h1>
-			<form onSubmit={onSubmit} style={{ display: 'grid', gap: 8 }}>
-				<input placeholder="ชื่อ" value={name} onChange={e=>setName(e.target.value)} />
+			<form onSubmit={submit} style={{ display: 'grid', gap: 8 }}>
 				<input placeholder="อีเมล" value={email} onChange={e=>setEmail(e.target.value)} />
-				<input placeholder="รหัสผ่าน (6 ตัวอักษรขึ้นไป)" type="password" value={password} onChange={e=>setPassword(e.target.value)} />
-				{error && <div style={{ color: 'crimson' }}>{error}</div>}
-				<button type="submit">สมัครสมาชิก</button>
+				<input placeholder="รหัสผ่าน" type="password" value={password} onChange={e=>setPassword(e.target.value)} />
+				<input placeholder="ชื่อ" value={name} onChange={e=>setName(e.target.value)} />
+				<button type="submit">สมัคร</button>
 			</form>
+			{msg && <div>{msg}</div>}
 		</div>
 	)
 }

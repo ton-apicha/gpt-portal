@@ -45,9 +45,13 @@ export default function Markdown({ children }: { children: string }){
 				pre: ({ children }) => <PreWithCopy>{children}</PreWithCopy>,
 				code: ({ inline, className, children, ...props }) => {
 					return inline
-						? <code className="rounded bg-white/10 px-1 py-0.5 text-[90%]" {...props}>{children}</code>
-						: <code className={className} {...props}>{children}</code>
+						? <code className="rounded bg-white/10 px-1 py-0.5 text-[90%] break-words" {...props}>{children}</code>
+						: <code className={`${className || ''} break-words`} {...props}>{children}</code>
 				},
+				p: (props) => <p className="break-words whitespace-pre-wrap" {...props} />,
+				li: (props) => <li className="break-words" {...props} />,
+				a: (props) => <a className="underline break-words" {...props} />,
+				img: (props) => <img className="max-w-full h-auto rounded" {...props} />,
 			}}
 		>
 			{children}

@@ -12,9 +12,11 @@ test.describe('Chat CRUD & navigation', () => {
 
 	test('rename chat from sidebar', async ({ page }) => {
 		await page.getByRole('button', { name: 'สร้างแชทใหม่' }).click()
-		// Open prompt via Rename button: use page.once to handle prompt
+		// Open prompt via Top Toolbar Rename button
 		page.once('dialog', (dialog) => dialog.accept('ชื่อทดสอบ'))
-		await page.getByText('Rename', { exact: true }).first().click()
+		const renameBtn = page.getByRole('button', { name: 'Rename' })
+		await expect(renameBtn).toBeVisible()
+		await renameBtn.click()
 		// Wait for the first sidebar item to contain new title
 		const firstItem = page.locator('aside nav > div').first()
 		await expect(firstItem).toContainText('ชื่อทดสอบ')
@@ -23,7 +25,9 @@ test.describe('Chat CRUD & navigation', () => {
 	test('delete chat from sidebar', async ({ page }) => {
 		await page.getByRole('button', { name: 'สร้างแชทใหม่' }).click()
 		page.once('dialog', (dialog) => dialog.accept())
-		await page.getByText('Delete').first().click()
+		const delBtn = page.getByRole('button', { name: 'Delete' })
+		await expect(delBtn).toBeVisible()
+		await delBtn.click()
 		// After delete, sidebar refreshes; just ensure page stays accessible
 		await expect(page).toHaveTitle(/.*/)
 	})
