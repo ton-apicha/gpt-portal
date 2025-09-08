@@ -17,7 +17,9 @@ export async function GET() {
     if (!session?.user?.id || session.user.role !== 'ADMIN') {
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
-    const days = 14
+    const url = new URL((globalThis as any).request?.url || 'http://local')
+    const d = Number(url.searchParams?.get?.('days') || 14)
+    const days = Math.max(7, Math.min(isNaN(d) ? 14 : d, 30))
     const today = new Date()
     const labels: string[] = []
     for (let i = days - 1; i >= 0; i -= 1) {
